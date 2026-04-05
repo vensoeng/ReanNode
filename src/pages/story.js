@@ -45,12 +45,12 @@ export default function StoryPage()
                                                         <div className="list df-l">
                                                             <strong>Main:</strong>
                                                             <div className="text df-l">
-                                                                <a><p>be</p></a><a ><p>brother</p></a><a ><p></p></a><a ><p></p></a>                                    </div>
+                                                                <span><p>be</p></span><span ><p>brother</p></span><span ><p></p></span><span ><p></p></span>                                    </div>
                                                         </div>
                                                         <div className="list df-l">
                                                             <strong>Hastag:</strong>
                                                             <div className="text df-l">
-                                                                <a ><p>brother</p></a><a><p>family</p></a><a ><p></p></a>                                    </div>
+                                                                <span ><p>brother</p></span><span><p>family</p></span><span ><p></p></span>                                    </div>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -72,12 +72,12 @@ export default function StoryPage()
                                                         <div className="list df-l">
                                                             <strong>Main:</strong>
                                                             <div className="text df-l">
-                                                                <a><p>be</p></a><a ><p>brother</p></a><a ><p></p></a><a ><p></p></a>                                    </div>
+                                                                <span><p>be</p></span><span ><p>brother</p></span><span ><p></p></span><span ><p></p></span>                                    </div>
                                                         </div>
                                                         <div className="list df-l">
                                                             <strong>Hastag:</strong>
                                                             <div className="text df-l">
-                                                                <a ><p>brother</p></a><a><p>family</p></a><a ><p></p></a>                                    </div>
+                                                                <span ><p>brother</p></span><span><p>family</p></span><span ><p></p></span>                                    </div>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -99,12 +99,12 @@ export default function StoryPage()
                                                         <div className="list df-l">
                                                             <strong>Main:</strong>
                                                             <div className="text df-l">
-                                                                <a><p>be</p></a><a ><p>brother</p></a><a ><p></p></a><a ><p></p></a>                                    </div>
+                                                                <span><p>be</p></span><span ><p>brother</p></span><span ><p></p></span><span ><p></p></span>                                    </div>
                                                         </div>
                                                         <div className="list df-l">
                                                             <strong>Hastag:</strong>
                                                             <div className="text df-l">
-                                                                <a ><p>brother</p></a><a><p>family</p></a><a ><p></p></a>                                    </div>
+                                                                <span ><p>brother</p></span><span><p>family</p></span><span ><p></p></span>                                    </div>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -126,12 +126,12 @@ export default function StoryPage()
                                                         <div className="list df-l">
                                                             <strong>Main:</strong>
                                                             <div className="text df-l">
-                                                                <a><p>be</p></a><a ><p>brother</p></a><a ><p></p></a><a ><p></p></a>                                    </div>
+                                                                <span><p>be</p></span><span ><p>brother</p></span><span ><p></p></span><span ><p></p></span>                                    </div>
                                                         </div>
                                                         <div className="list df-l">
                                                             <strong>Hastag:</strong>
                                                             <div className="text df-l">
-                                                                <a ><p>brother</p></a><a><p>family</p></a><a ><p></p></a>                                    </div>
+                                                                <span ><p>brother</p></span><span><p>family</p></span><span ><p></p></span>                                    </div>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -153,12 +153,12 @@ export default function StoryPage()
                                                         <div className="list df-l">
                                                             <strong>Main:</strong>
                                                             <div className="text df-l">
-                                                                <a><p>be</p></a><a ><p>brother</p></a><a ><p></p></a><a ><p></p></a>                                    </div>
+                                                                <span><p>be</p></span><span ><p>brother</p></span><span ><p></p></span><span ><p></p></span>                                    </div>
                                                         </div>
                                                         <div className="list df-l">
                                                             <strong>Hastag:</strong>
                                                             <div className="text df-l">
-                                                                <a ><p>brother</p></a><a><p>family</p></a><a ><p></p></a>                                    </div>
+                                                                <span ><p>brother</p></span><span><p>family</p></span><span ><p></p></span>                                    </div>
                                                         </div>
                                                     </div>
                                                 </li>

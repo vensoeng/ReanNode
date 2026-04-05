@@ -27,10 +27,10 @@ export default function WebsitePage({h2 = '', blockquote = '', listItem = '',mai
           <div className="wbd-box">
                <div className="wbd-con df-s">
                     {/* image */}
-                    {flex == true ? 
+                    {flex === true ? 
                     <div className='row-img'>
                         <div className='ri-box'>
-                            <img className='img-c' src={mainImg == ''? chobImg : mainImg} alt="" />
+                            <img className='img-c' src={mainImg === '' ? chobImg : mainImg} alt="" />
                         </div>
                     </div>
                     : ''}
@@ -38,10 +38,10 @@ export default function WebsitePage({h2 = '', blockquote = '', listItem = '',mai
                     <div className='row-text'>
                         <div className='rt-box'>
                             <h2 className='df-l'>
-                                {h2 == '' ? <> <Global /> គេហទំព័រគ្រប់គ្រងសៀវភៅ </> : h2}
+                                {h2 === '' ? <> <Global /> គេហទំព័រគ្រប់គ្រងសៀវភៅ </> : h2}
                             </h2>
                             <blockquote>
-                                {blockquote == "" ? 
+                                {blockquote === "" ? 
                                 <p>
                                     គេហទំព័រនេះត្រូវបានបង្កើតដោយប្រើភាសា Back-end រួមមាន PHP និង Laravel Framework។ វាបានបង្ហោះនៅលើ InfinityFree ក្នុងកំណែទម្រង់៣.០.១៥ ដោយផ្តោតលើសមត្ថភាពប្រតិបត្តិ និងការប្រើប្រាស់ងាយស្រួល។                                    
                                 </p>
@@ -56,7 +56,7 @@ export default function WebsitePage({h2 = '', blockquote = '', listItem = '',mai
                                     ))
                                 }
                             </ul>
-                            {btn == '' ? <>
+                            {btn === '' ? <>
                             <Button element='link' action='https://www.youtube.com/'>
                                 ទាញយកកូដ
                                 <ArrowRight/>
@@ -66,7 +66,7 @@ export default function WebsitePage({h2 = '', blockquote = '', listItem = '',mai
                         </div>
                     </div>
                     {/* image */}
-                    {flex == false ? 
+                    {flex === false ? 
                     <div className='row-img'>
                         <div className='ri-box'>
                             <img className='img-c' src={chobImg} alt="" />

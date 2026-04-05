@@ -1,8 +1,7 @@
 import { Link,NavLink } from 'react-router-dom';
 import '../../assets/css/header.css';
-import alienImg from '../../assets/img/alien.jpg';
 import favIcon from '../../assets/img/favicon.png';
-import { ExportCircle,Flash } from 'iconsax-reactjs';
+import { Flash } from 'iconsax-reactjs';
 export default function Header()
 {
     return(

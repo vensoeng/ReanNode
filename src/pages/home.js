@@ -3,7 +3,7 @@ import Button from '../components/common/button';
 import nmuLogo from './../assets/img/alien.jpg';
 import mainImgUIPagoda from './../assets/img/chob_web.png';
 import mainImgUILinkme from './../assets/img/web_linkme.png';
-import { ExportCircle,DiscountShape, Global, Record, Hashtag, Book1 ,MessageText1, Profile2User, Activity, Blur, Code, Cd, ArrowRight} from 'iconsax-reactjs';
+import { DiscountShape, Global, Record, Hashtag, Book1, Profile2User, Activity, Blur, Code, Cd } from 'iconsax-reactjs';
 import AboutPage from './about';
 import WebsitePage from './website';
 import StoryPage from './story';
