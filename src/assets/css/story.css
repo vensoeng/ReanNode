@@ -189,3 +189,9 @@
 .web-contact-body .content > .detail .list:last-child a:hover{
     background: var(--sg-bgblack-art);
 }
+
+@media screen and (max-width: 1250px) {
+    .ms-con{
+        margin: 0rem 1rem;
+    }
+}
