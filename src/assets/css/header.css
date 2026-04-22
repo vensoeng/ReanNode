@@ -1,13 +1,24 @@
 .pageon .box{
     position: fixed;
-    top: 2rem;
+    top: calc(100% - 3rem);
     transform: translate(-50%, -50%);
     left: 50%;
     background: var(--sg-maincolor-orangdark);
     color: var(--bgcolor-Light);
     z-index: 100000000;
-    border-radius: 0px 0px 10px 10px;
+    border-radius: 10px 10px 0px 0px;
 }
+.pageon::before{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    content: '';
+    inset: 0;
+    background: var(--sg-maincolor-orangdark);
+    opacity: 0.1;
+    z-index: 1000000;
+}
+
 .pageon .box h2{
     padding: 2rem;
     display: block;

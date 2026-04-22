@@ -1,6 +1,6 @@
 import './../assets/css/about.css';
 import aboutImg from './../assets/img/vensoeng.png';
-import nmuLogo from './../assets/img/logo_nmu.png';
+import nmuLogo from './../assets/img/nmu_logo.jpg';
 import Button from '../components/common/button';
 import { MessageText1, Profile2User, Activity, Blur, Code, Cd, ArrowRight} from 'iconsax-reactjs';
 export default function AboutPage()
