@@ -1,9 +1,10 @@
 /* NGAlert v0.1.0 - Lightweight Global Alert Library
- * https://github.com/YOUR_USERNAME/ngalert
+ * https://github.com/vensoeng/ngalert
  * MIT License
  */
 
 /* ── Design tokens ─────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
 :root {
   --nga-z-index:       9999;
   --nga-overlay:       rgba(13, 17, 23, 0.36);
@@ -20,6 +21,7 @@
   --nga-bg-error:      #ffeded;
   --nga-bg-warning:    #fff9ed;
   --nga-bg-info:       #e8f6ff;
+  --nga-font: "Google Sans", sans-serif;
 }
 
 /* ── Root overlay wrapper ──────────────────────────────── */
@@ -118,6 +120,7 @@
   font-size: 1.03rem;
   font-weight: 700;
   line-height: 1.2;
+  font-family: var(--nga-font);
   color: var(--nga-panel-text);
 }
 
@@ -127,6 +130,7 @@
   line-height: 1.5;
   color: var(--nga-panel-subtext);
   text-align: initial;
+  font-family: var(--nga-font);
 }
 
 /* ── Close button ──────────────────────────────────────── */
