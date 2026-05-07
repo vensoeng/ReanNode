@@ -25,11 +25,11 @@ export default function Header()
                     </ul>
                 </div>
                 <div className="btn-main df-r">
-                    <Link to='/login' className="btn">
+                    {/* <Link to='/login' className="btn">
                         <p>ទំនាក់ទំនង់</p>
-                    </Link>
+                    </Link> */}
                     <Link to='/register' className="btn">
-                        <p>ចុះឈ្មោះរៀន</p>
+                        <p>ទំនាក់ទំនង់</p>
                         <div className="icon icon-ra icon-sm ip">
                             <Flash/>
                         </div>

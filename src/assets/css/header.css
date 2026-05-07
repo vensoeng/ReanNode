@@ -8,7 +8,7 @@
     z-index: 100000000;
     border-radius: 10px 10px 0px 0px;
 }
-.pageon::before{
+/* .pageon::before{
     width: 100%;
     height: 100%;
     position: fixed;
@@ -17,7 +17,7 @@
     background: var(--sg-maincolor-orangdark);
     opacity: 0.1;
     z-index: 1000000;
-}
+} */
 
 .pageon .box h2{
     padding: 2rem;
@@ -159,7 +159,7 @@
         background: transparent;
         /* box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px; */
     }
-    .webhead .btn-main a.btn:first-child{
+    /* .webhead .btn-main a.btn:first-child{
         display: none;
-    }
+    } */
 }
