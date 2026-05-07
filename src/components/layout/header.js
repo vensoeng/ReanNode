@@ -28,7 +28,7 @@ export default function Header()
                     {/* <Link to='/login' className="btn">
                         <p>ទំនាក់ទំនង់</p>
                     </Link> */}
-                    <Link to='/register' className="btn">
+                    <Link to='https://t.me/vensoeng' className="btn">
                         <p>ទំនាក់ទំនង់</p>
                         <div className="icon icon-ra icon-sm ip">
                             <Flash/>
