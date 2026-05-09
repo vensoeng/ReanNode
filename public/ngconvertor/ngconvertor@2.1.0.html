@@ -294,7 +294,7 @@
                 <div class="glass-card rounded-xl">
                     <div class="grid lg:grid-cols-2 gap-12 items-center">
                         <div>
-                            <p class="text-on-surface-variant mb-8">Experience the real-time between English number to Khmer text.</p>
+                            <p class="text-on-surface-variant mb-8">Experience the real-time between number to Khmer text. You can enter a number and see it converted instantly in Khmer number or English number.</p>
                             <div class="space-y-6">
                                 <div class="space-y-2">
                                     <label class="font-label text-label text-outline uppercase tracking-wider">Input Numerical
@@ -338,20 +338,48 @@
                         <div class="code-block-bg p-lg rounded-lg border border-outline-variant">
                             <pre class="font-code text-code text-on-secondary-container overflow-x-auto">
 <code>const result = NGConvertor.toKhmerText(168);
-// Result => មួយរយហុកសិបប្រាំបី
-console.log(result);</code></pre>
+console.log(result); // Result => មួយរយហុកសិបប្រាំបី</code></pre>
                         </div>
                     </div>
-                    <!-- toEnglish() -->
-                    <div class="border-l-4 border-tertiary pl-lg">
+                    <!-- With convert number() -->
+                    <div class="border-l-4 border-primary pl-lg">
                         <h3 class="font-h3 text-h3 mb-sm">With convert number</h3>
                         <p class="text-body-base text-on-surface-variant mb-md">Converts the number to Englsih after convert to text.</p>
                         <div class="code-block-bg p-lg rounded-lg border border-outline-variant">
                             <pre class="font-code text-code text-on-secondary-container overflow-x-auto">
-<code>const result = NGConvertor.toKhmerText(ngConvertor.toEnglish("168"));
-// Result => មួយរយហុកសិបប្រាំបី
-console.log(result);
+<code>const result = NGConvertor.toKhmerText(ngConvertor.toEnglish("១៦៨"));
+console.log(result); // Result => មួយរយហុកសិបប្រាំបី
 </code></pre>
+                        </div>
+                    </div>
+                    <!-- the crazy feature covertor -->
+                    <div class="border-l-4 border-tertiary pl-lg">
+                        <h3 class="font-h3 text-h3 mb-sm">The Crazy Feature</h3>
+                        <p class="text-body-base text-on-surface-variant mb-md">Converts with logic check value first.</p>
+                        <div class="code-block-bg p-lg rounded-lg border border-outline-variant">
+                            <pre class="font-code text-code text-on-secondary-container overflow-x-auto">
+<code>//this is for make action feature Try it live
+var input = document.querySelector("input[data-id='input']");
+var output = document.querySelector("div[data-id='output']");
+input.addEventListener("input", function() {
+    var value = input.value;
+    if (value.trim() === "") {
+        output.textContent = "__ __ __";
+        return;
+    }
+    if(ngConvertor.isKhmer(value.trim())) {
+       output.textContent = ngConvertor.toKhmerText(ngConvertor.toEnglish(value));
+       return;
+    } else if(ngConvertor.isKhmer(value.trim()) === false || ngConvertor.isEnglish(value.trim()) === false) {
+        alert("You enter invalid number! Please enter only Khmer or English number.");
+        output.textContent = "__ __ __";
+        input.value = "";
+        return;
+    }else{
+        var result = ngConvertor.toKhmerText(value);
+        output.textContent = result;
+    }
+});</code></pre>
                         </div>
                     </div>
                 </div>
@@ -361,7 +389,7 @@ console.log(result);
                 <h2 class="font-h2 text-h2 text-on-surface mb-lg">Downloads</h2>
                 <div class="flex flex-wrap gap-md">
                     <a class="flex items-center gap-3 px-lg py-md bg-primary text-on-primary rounded-lg font-label hover:opacity-90 transition-all"
-                        href="https://vensoeng.vercel.app/ngconvertor@1.0.0/dic/ngConvertor.js" download="true">
+                        href="https://vensoeng.vercel.app/ngconvertor@2.1.0/dist/ngConvertor.js" download="true">
                         <span class="material-symbols-outlined" data-icon="download">download</span>
                         Download file (.min.js)
                     </a>
@@ -434,12 +462,21 @@ console.log(result);
         var output = document.querySelector("div[data-id='output']");
         input.addEventListener("input", function() {
             var value = input.value;
-            if(ngConverto.isKhmer(value.trim())) {
+            if (value.trim() === "") {
+                output.textContent = "__ __ __";
+                return;
+            }
+            if(ngConvertor.isKhmer(value.trim())) {
                output.textContent = ngConvertor.toKhmerText(ngConvertor.toEnglish(value));
-               console.log(ngConverto.isKhmer(value.trim()));
+               console.log(ngConvertor.isKhmer(value.trim()));
                return;
-            } else {
-                var result = NGConvertor.toKhmerText(value);
+            } else if(ngConvertor.isKhmer(value.trim()) === false || ngConvertor.isEnglish(value.trim()) === false) {
+                alert("You enter invalid number! Please enter only Khmer or English number.");
+                output.textContent = "__ __ __";
+                input.value = "";
+                return;
+            }else{
+                var result = ngConvertor.toKhmerText(value);
                 output.textContent = result;
             }
         });
