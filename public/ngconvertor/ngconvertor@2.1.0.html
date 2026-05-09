@@ -360,7 +360,7 @@ console.log(result); // Result => មួយរយហុកសិបប្រា�
                         <p class="text-body-base text-on-surface-variant mb-md">Converts with logic check value first.</p>
                         <div class="code-block-bg p-lg rounded-lg border border-outline-variant">
                             <pre class="font-code text-code text-on-secondary-container overflow-x-auto">
-<code>//this is for make action feature Try it live
+<code>//This is for make action feature Try it live
 var input = document.querySelector("input[data-id='input']");
 var output = document.querySelector("div[data-id='output']");
 input.addEventListener("input", function() {
@@ -371,8 +371,9 @@ input.addEventListener("input", function() {
     }
     if(ngConvertor.isKhmer(value.trim())) {
        output.textContent = ngConvertor.toKhmerText(ngConvertor.toEnglish(value));
+       console.log(ngConvertor.isKhmer(value.trim()));
        return;
-    } else if(ngConvertor.isKhmer(value.trim()) === false || ngConvertor.isEnglish(value.trim()) === false) {
+    } else if(ngConvertor.isKhmer(value.trim()) == false && ngConvertor.isEnglish(value.trim()) == false) {
         alert("You enter invalid number! Please enter only Khmer or English number.");
         output.textContent = "__ __ __";
         input.value = "";
@@ -472,7 +473,7 @@ input.addEventListener("input", function() {
                output.textContent = ngConvertor.toKhmerText(ngConvertor.toEnglish(value));
                console.log(ngConvertor.isKhmer(value.trim()));
                return;
-            } else if(ngConvertor.isKhmer(value.trim()) === false || ngConvertor.isEnglish(value.trim()) === false) {
+            } else if(ngConvertor.isKhmer(value.trim()) == false && ngConvertor.isEnglish(value.trim()) == false) {
                 alert("You enter invalid number! Please enter only Khmer or English number.");
                 output.textContent = "__ __ __";
                 input.value = "";
