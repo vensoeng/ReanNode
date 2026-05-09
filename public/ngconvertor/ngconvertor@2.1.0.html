@@ -6,7 +6,7 @@
     <title>NG Convertor - Designs by Vensoeng</title>
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="NG Convertor - Designs by Vensoeng">
-    <meta property="og:description" content="NGConvertor enables developers to seamlessly convert numbers between Khmer and English (Arabic) numerals. Our mission is to bridge the gap between Latin and Khmer numeral systems and support an inclusive open-source ecosystem for Cambodian software development.">
+    <meta property="og:description" content="NGConvertor@2.1.0 enables developers to seamlessly convert numbers between Khmer and English (Arabic) numerals. Our mission is to bridge the gap between Latin and Khmer numeral systems and support an inclusive open-source ecosystem for Cambodian software development.">
     <meta property="og:url" content="https://vensoeng.vercel.app/ngconvertor">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="km_KH">
@@ -20,7 +20,7 @@
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="NG Convertor - Designs by Vensoeng">
-    <meta name="twitter:description" content="NGConvertor enables developers to seamlessly convert numbers between Khmer and English (Arabic) numerals. Our mission is to bridge the gap between Latin and Khmer numeral systems and support an inclusive open-source ecosystem for Cambodian software development.">
+    <meta name="twitter:description" content="NGConvertor@2.1.0 enables developers to seamlessly convert numbers between Khmer and English (Arabic) numerals. Our mission is to bridge the gap between Latin and Khmer numeral systems and support an inclusive open-source ecosystem for Cambodian software development.">
     <meta name="twitter:image" content="https://github.com/vensoeng/My-photo/blob/main/vensoeng/ngconvertor_og.png?raw=true">
     <!-- Other Meta Tags -->
     <meta property="profile:username" content="Vensoeng">
@@ -227,11 +227,9 @@
                 <div class="mb-lg">
                     <span
                         class="font-label text-label text-primary uppercase tracking-widest mb-xs inline-block">Introduction</span>
-                    <h1 class="font-h1 text-h1 text-on-surface mb-md">Welcome to NGConvertor</h1>
+                    <h1 class="font-h1 text-h1 text-on-surface mb-md">NGConvertor@2.1.0</h1>
                     <p class="font-body-base text-body-base text-on-surface-variant max-w-2xl">
-                       NGConvertor enables developers to seamlessly convert numbers between Khmer and English (Arabic) numerals.
-                        Our mission is to bridge the gap between Latin and Khmer numeral systems and support an inclusive open-source ecosystem for Cambodian
-                         software development.
+                       NGConvertor@2.1.0 add new feature that converts numbers to Khmer text.
                     </p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
@@ -277,7 +275,7 @@
                             <span class="font-label text-label text-on-surface-variant">CDN USAGE</span>
                         </div>
                         <div class="code-block-bg p-lg rounded-lg border border-outline-variant relative group">
-                            <pre id="CDN-Js" class="font-code text-code text-on-secondary-container overflow-x-auto"><code>&lt;script src="https://vensoeng.vercel.app/ngconvertor@1.0.0/dist/ngConvertor.js"&gt;&lt;/script&gt;</code></pre>
+                            <pre id="CDN-Js" class="font-code text-code text-on-secondary-container overflow-x-auto"><code>&lt;script src="https://vensoeng.vercel.app/ngconvertor@2.1.0/dist/ngConvertor.js"&gt;&lt;/script&gt;</code></pre>
                             <!-- <button onclick="copyToClipboard('CDN-Js')"
                                 class="absolute top-4 right-4 p-2 text-on-surface-variant hover:text-on-surface transition-colors bg-surface-container-highest rounded">
                                 <span class="material-symbols-outlined text-[18px]"
@@ -296,8 +294,7 @@
                 <div class="glass-card rounded-xl">
                     <div class="grid lg:grid-cols-2 gap-12 items-center">
                         <div>
-                            <p class="text-on-surface-variant mb-8">Experience the real-time character mapping between English and
-                                Khmer numerals. No API calls, just pure client-side speed.</p>
+                            <p class="text-on-surface-variant mb-8">Experience the real-time between English number to Khmer text.</p>
                             <div class="space-y-6">
                                 <div class="space-y-2">
                                     <label class="font-label text-label text-outline uppercase tracking-wider">Input Numerical
@@ -306,15 +303,10 @@
                                         placeholder="Please enter number" type="text" />
                                 </div>
                                 <div class="flex flex-wrap gap-3" id="btn-feature">
-                                    <button data-id="auto" class="data-id-active px-4 py-2 bg-primary-container text-primary font-label text-xs flex items-center gap-2 rounded-lg">
+                                    <button onclick="alert('Currently you are on auto convert mode!')" 
+                                    data-id="auto" class="data-id-active px-4 py-2 bg-primary-container text-primary font-label text-xs flex items-center gap-2 rounded-lg">
                                         <span class="material-symbols-outlined text-sm" data-icon="auto_fix_high">auto_fix_high</span>
                                         Auto Convert
-                                    </button>
-                                    <button data-id="to-khmer" class="px-4 py-2 bg-surface-container-high text-primary font-label text-xs flex items-center gap-2 rounded-lg">
-                                        To Khmer
-                                    </button>
-                                    <button data-id="to-english" class="px-4 py-2 bg-surface-container-high text-primary font-label text-xs flex items-center gap-2 rounded-lg">
-                                        To English
                                     </button>
                                 </div>
                             </div>
@@ -339,55 +331,27 @@
             <section class="mb-16" id="api-reference">
                 <h2 class="font-h2 text-h2 text-on-surface mb-lg">Reference</h2>
                 <div class="space-y-xl">
-                    <!-- toKhmer() -->
+                    <!-- toKhmerText() -->
                     <div class="border-l-4 border-primary pl-lg">
-                        <h3 class="font-h3 text-h3 mb-sm">toKhmer(value)</h3>
-                        <p class="text-body-base text-on-surface-variant mb-md">Converts a Latin number string or number
-                            type into Khmer numerals.</p>
+                        <h3 class="font-h3 text-h3 mb-sm">Browser Usage</h3>
+                        <p class="text-body-base text-on-surface-variant mb-md">Using NgConvertor@2.1.0 with simple keyword in the browser.</p>
                         <div class="code-block-bg p-lg rounded-lg border border-outline-variant">
-                            <pre class="font-code text-code text-on-secondary-container overflow-x-auto"><code>// Returns "១២៣"
-ngConvertor.toKhmer(123);</code></pre>
+                            <pre class="font-code text-code text-on-secondary-container overflow-x-auto">
+<code>const result = NGConvertor.toKhmerText(168);
+// Result => មួយរយហុកសិបប្រាំបី
+console.log(result);</code></pre>
                         </div>
                     </div>
                     <!-- toEnglish() -->
-                    <div class="border-l-4 border-secondary pl-lg">
-                        <h3 class="font-h3 text-h3 mb-sm">toEnglish(value)</h3>
-                        <p class="text-body-base text-on-surface-variant mb-md">Converts Khmer numeral strings back into
-                            standard Latin numbers.</p>
-                        <div class="code-block-bg p-lg rounded-lg border border-outline-variant">
-                            <pre class="font-code text-code text-on-secondary-container overflow-x-auto"><code>// Returns "456"
-ngConvertor.toEnglish("៤៥៦");</code></pre>
-                        </div>
-                    </div>
-                    <!-- convert() -->
                     <div class="border-l-4 border-tertiary pl-lg">
-                        <h3 class="font-h3 text-h3 mb-sm">convert(value, target)</h3>
-                        <p class="text-body-base text-on-surface-variant mb-md">Smart conversion that detects input type
-                            and converts to the specified target ('km' or 'en').</p>
+                        <h3 class="font-h3 text-h3 mb-sm">With convert number</h3>
+                        <p class="text-body-base text-on-surface-variant mb-md">Converts the number to Englsih after convert to text.</p>
                         <div class="code-block-bg p-lg rounded-lg border border-outline-variant">
-                            <pre class="font-code text-code text-on-secondary-container overflow-x-auto"><code>// Auto-detect and convert to Khmer
-ngConvertor.convert("789", "km"); // "៧៨៩"</code></pre>
-                        </div>
-                    </div>
-                    <!-- isKhmer() / isEnglish() -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
-                        <div class="border-l-4 border-outline pl-lg">
-                            <h3 class="font-h3 text-h3 mb-sm">isKhmer(value)</h3>
-                            <p class="text-body-sm text-on-surface-variant mb-md">Validates if the input string contains
-                                only Khmer digits.</p>
-                            <div class="code-block-bg p-md rounded-lg border border-outline-variant">
-                                <pre
-                                    class="font-code text-[12px] text-on-secondary-container overflow-x-auto"><code>ngConvertor.isKhmer("១២"); // true</code></pre>
-                            </div>
-                        </div>
-                        <div class="border-l-4 border-outline pl-lg">
-                            <h3 class="font-h3 text-h3 mb-sm">isEnglish(value)</h3>
-                            <p class="text-body-sm text-on-surface-variant mb-md">Validates if the input string contains
-                                only Latin digits.</p>
-                            <div class="code-block-bg p-md rounded-lg border border-outline-variant">
-                                <pre
-                                    class="font-code text-[12px] text-on-secondary-container"><code>ngConvertor.isEnglish("12"); // true</code></pre>
-                            </div>
+                            <pre class="font-code text-code text-on-secondary-container overflow-x-auto">
+<code>const result = NGConvertor.toKhmerText(ngConvertor.toEnglish("168"));
+// Result => មួយរយហុកសិបប្រាំបី
+console.log(result);
+</code></pre>
                         </div>
                     </div>
                 </div>
@@ -462,68 +426,23 @@ ngConvertor.convert("789", "km"); // "៧៨៩"</code></pre>
         </div>
     </footer>
     <!-- this is link CDN of NGConvertor -->
-    <script src="https://vensoeng.vercel.app/ngconvertor@1.0.0/dist/ngConvertor.js"></script>
+    <script src="https://vensoeng.vercel.app/ngconvertor@2.1.0/dist/ngConvertor.js"></script>
     <!-- this is the script for ngConvertor -->
     <script>
         //this is for make action feature
         var input = document.querySelector("input[data-id='input']");
         var output = document.querySelector("div[data-id='output']");
-        const ConvertFn = () => {
-            input.addEventListener("input", () => {
-                if(input.value.trim() === "") {
-                    output.textContent = "__ __ __";
-                    return;
-                }
-
-                let activeBtn = null;
-                btnFeatures.forEach(btn => {
-                    if (btn.classList.contains("data-id-active")) {
-                        activeBtn = btn;
-                    }
-                });
-                if (activeBtn) {
-                    const dataId = activeBtn.getAttribute("data-id");
-                    if (dataId === "to-khmer") {
-                        output.textContent = ngConvertor.toKhmer(input.value);
-                    } else if (dataId === "to-english") {
-                        output.textContent = ngConvertor.toEnglish(input.value);
-                    } else if (dataId === "auto") {
-                        output.textContent = ngConvertor.convert(input.value);
-                    }
-                } else {
-                    output.textContent = "__ __ __";
-                }
-            });
-        }
-        // load the function convert 
-        document.addEventListener("DOMContentLoaded", () => {
-            ConvertFn();
+        input.addEventListener("input", function() {
+            var value = input.value;
+            if(ngConverto.isKhmer(value.trim())) {
+               output.textContent = ngConvertor.toKhmerText(ngConvertor.toEnglish(value));
+               console.log(ngConverto.isKhmer(value.trim()));
+               return;
+            } else {
+                var result = NGConvertor.toKhmerText(value);
+                output.textContent = result;
+            }
         });
-        // this is add active to btn action 
-        var btnFeatures = document.querySelectorAll("#btn-feature button");
-        btnFeatures.forEach(btn => {
-            btn.addEventListener("click", () => {
-                btnFeatures.forEach((b) =>{ 
-                    b.classList.remove("data-id-active");
-                    b.classList.remove("bg-primary-container");
-                    b.classList.add("bg-surface-container-high");
-                });
-                btn.classList.add("data-id-active");
-                btn.classList.add("bg-primary-container");
-                btn.classList.remove("bg-surface-container-high");
-                // init convert number 
-                ConvertFn();
-            });
-        });
-        // this is function for copy to clipboard
-        function copyToClipboard(elementId) {
-            const text = document.getElementById(elementId).innerText;
-            navigator.clipboard.writeText(text).then(() => {
-                alert('Copied to clipboard!');
-            }).catch(err => {
-                alert('Failed to copy to clipboard.');
-            });
-        }
     </script>
     <!-- this is script of the content  -->
     <script>
