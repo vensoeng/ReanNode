@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="my_services">my service</title>
+    <!-- icon website -->
+    <link rel="shortcut icon" href="https://github.com/vensoeng/My-photo/blob/main/vensoeng/favicon.png?raw=true" type="image/png" sizes="307x307" data-id="favicon">
+    <link rel="icon" href="https://github.com/vensoeng/My-photo/blob/main/vensoeng/vensoeng_logo_2025.png?raw=true" type="image/png" sizes="307x307">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:site_name" content="VenSoeng - Services">
+    <meta property="og:title" content="ហាងតូចរបស់ Admin | Admin's Offer | 管理员的小店">
+    <meta property="og:description" content="Professional solutions for your digital needs. រកសេវាកម្មល្អៗពី Admin នៅទីនេះ! 您的支持是我持续分享的动力。">
+    <meta name="author" content="VenSoeng">
+    <meta name="keywords" content="VenSoeng, vensoeng, វិនសឹង្ហ, ស៊ីមវិនសឹង្ហ,frontend developer,web developer,Cambodia,JavaScript,HTML,CSS,React,web instructor,content creator,portfolio">
+    <meta name="creator" content="VenSoeng">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <!-- Image Tags -->
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/126303297?v=4">
+    <meta property="og:image:secure_url" content="https://avatars.githubusercontent.com/u/126303297?v=4">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="515">
+    <meta property="og:image:alt" content="vensoeng Portfolio Preview">
+    <meta property="og:image:type" content="https://avatars.githubusercontent.com/u/126303297?v=4">
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ហាងតូចរបស់ Admin | Admin's Offer | 管理员的小店">
+    <meta name="twitter:description" content="Professional solutions for your digital needs. រកសេវាកម្មល្អៗពី Admin នៅទីនេះ! 您的支持是我持续分享的动力。">
+    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/126303297?v=4">
+    <!-- this is google cdn -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- this is tailwind config -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#c3c6d5",
+                        "surface-dim": "#dbdadb",
+                        "surface": "#faf9fa",
+                        "tertiary-container": "#bfab49",
+                        "secondary": "#5a5f63",
+                        "secondary-container": "#dfe3e8",
+                        "background": "#faf9fa",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed": "#001946",
+                        "inverse-surface": "#303031",
+                        "surface-container-low": "#f5f3f4",
+                        "on-secondary-fixed": "#171c20",
+                        "inverse-primary": "#b1c5ff",
+                        "primary": "#094cb2",
+                        "surface-variant": "#e3e2e3",
+                        "tertiary-fixed": "#f9e37a",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#faf9fa",
+                        "secondary-fixed-dim": "#c2c7cc",
+                        "on-secondary-fixed-variant": "#42474b",
+                        "tertiary": "#6d5e00",
+                        "surface-container-highest": "#e3e2e3",
+                        "surface-container-high": "#e9e8e9",
+                        "on-secondary-container": "#606569",
+                        "on-tertiary-fixed": "#211b00",
+                        "on-surface": "#1b1c1d",
+                        "on-tertiary-fixed-variant": "#524600",
+                        "on-error": "#ffffff",
+                        "surface-container": "#efedee",
+                        "secondary-fixed": "#dfe3e8",
+                        "inverse-on-surface": "#f2f0f1",
+                        "surface-tint": "#2259bf",
+                        "primary-container": "#3366cc",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#d9e2ff",
+                        "on-error-container": "#93000a",
+                        "on-primary-container": "#e7ebff",
+                        "tertiary-fixed-dim": "#dcc661",
+                        "on-background": "#1b1c1d",
+                        "primary-fixed-dim": "#b1c5ff",
+                        "on-tertiary-container": "#4a3f00",
+                        "on-primary-fixed-variant": "#00419d",
+                        "outline": "#737784",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#434653"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "1.5rem",
+                        "container-padding": "2rem",
+                        "section-margin": "5rem",
+                        "card-gap": "2rem",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "display": ["Noto Serif"],
+                        "body": ["Inter"],
+                        "label": ["Public Sans"],
+                        "title-sm": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "price-display": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "title-sm": ["20px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "price-display": ["24px", { "lineHeight": "1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-xl": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "headline-lg": ["30px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "line-clamp-1": ["16px", {"lineHeight": "1.6", "fontWeight": "400", "overflow": "hidden", "display": "-webkit-box", "-webkit-box-orient": "vertical", "-webkit-line-clamp": "1"}],
+                    }
+                    
+                },
+            },
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+        *{
+            font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji",
+            "Google Sans";
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .purple-accent-glow {
+            box-shadow: 0 10px 15px -3px rgba(139, 92, 246, 0.1), 0 4px 6px -4px rgba(139, 92, 246, 0.1);
+        }
+
+        .status-available {
+            box-shadow: 0 0 10px rgba(34, 197, 94, 0.2);
+        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+        @keyframes slideDown { from { transform: translateY(0); } to { transform: translateY(100%); } }
+
+        .animate-fade-in { animation: fadeIn 0.3s ease-out forwards; }
+        .animate-slide-up { animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+        .animate-slide-down { animation: slideDown 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+        #lang-overlay {
+            transition: opacity 0.4s ease-in-out;
+        }
+        .hidden-popup { display: none !important; }
+        .scroll-visible{bottom: 1.5rem !important; transition: all ease-in-out 0.3s;}
+    </style>
+    <script>
+    // 1. Configuration
+    const DEFAULT_LANG = 'kh';
+    const SUPPORTED_LANGS = ['en', 'kh', 'zh'];
+    const DATA_URL = "/service/";
+    let GET_CURRENT_LANG = 'en';
+    async function initLanguage() {
+        // Check storage
+        let savedLang = localStorage.getItem('user_language');
+        const isFirstTime = !localStorage.getItem('language_set');
+        // If first time or invalid, default to English
+        if (!savedLang || !SUPPORTED_LANGS.includes(savedLang)) {
+            savedLang = DEFAULT_LANG;
+        }
+        GET_CURRENT_LANG = savedLang;
+        // Load the JSON file
+        try {
+            const response = await fetch(`${DATA_URL}/locales/${savedLang}.json`);
+            const translations = await response.json();
+            // Apply translations to the UI
+            applyTranslations(translations);
+            // Show the popup ONLY if it's the first time
+            if (isFirstTime) {
+                document.getElementById('lang-overlay').classList.remove('hidden');
+            }
+        } catch (error) {
+            console.error("Failed to load language file", error);
+        }
+    }
+    // 3. Helper to find elements with data-i18n attribute
+    function applyTranslations(data) {
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (data[key]) {
+                el.innerText = data[key];
+            }
+        });
+    }
+    // Run immediately
+    initLanguage();
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen pb-24">
+    <!-- Main Overlay Container -->
+    <div id="lang-overlay" class="fixed inset-0 bg-black/40 z-40 flex md:items-center items-end justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+        <!-- Popup Container -->
+        <div id="lang-modal" class="md:mb-0 mb-[-1rem] md:rounded-[1.8rem] rounded-t-xl md:max-w-xl max-w-lg bg-white w-full shadow-2xl z-50 transform translate-y-full transition-transform duration-500 ease-out">
+            <!-- Drag Handle for Mobile -->
+            <div class="md:hidden flex justify-center pt-4">
+                <div class="w-12 h-1.5 bg-gray-300 rounded-full"></div>
+            </div>
+            <!-- 1. Selection View -->
+            <div id="selection-view" class="p-8">
+                <div class="flex items-center justify-between pb-4 mb-2">
+                    <h2 data-i18n="select_lang" class="text-2xl font-bold text-gray-800">loading....</h2>
+                    <button onclick="closeLangPopup()" data-value="en" class="h-[3rem] w-[3rem] flex items-center justify-center hover:bg-gray-100 rounded-[5rem] transition-colors transition-all active:scale-95">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                </div>
+                <div class="space-y-3">
+                    <!-- English Option -->
+                    <div onclick="setTempSelection('en', this)" class="lang-card group flex items-center justify-between p-4 border-2 rounded-xl cursor-pointer transition-all active:scale-[0.97]" data-value="en">
+                        <div class="flex items-center gap-4">
+                            <img src="https://flagcdn.com/w40/gb.png" class="w-10 h-10 rounded-full object-cover border" alt="UK">
+                            <div>
+                                <p class="font-bold text-gray-900">English</p>
+                                <p class="text-sm text-gray-500">Default Language</p>
+                            </div>
+                        </div>
+                        <span class="radio-icon material-symbols-outlined text-blue-600">radio_button_checked</span>
+                    </div>
+                    <!-- Khmer Option -->
+                    <div onclick="setTempSelection('kh', this)" class="lang-card group flex items-center justify-between p-4 border-2 rounded-xl cursor-pointer transition-all active:scale-[0.97]" data-value="kh">
+                        <div class="flex items-center gap-4">
+                            <img src="https://flagcdn.com/w40/kh.png" class="w-10 h-10 rounded-full object-cover border" alt="Cambodia">
+                            <div>
+                                <p class="font-bold text-gray-900">Khmer</p>
+                                <p class="text-sm text-gray-500">ភាសាខ្មែរ</p>
+                            </div>
+                        </div>
+                        <span class="radio-icon material-symbols-outlined text-gray-300">radio_button_unchecked</span>
+                    </div>
+                    <!-- Chinese Option -->
+                    <div onclick="setTempSelection('zh', this)" class="lang-card group flex items-center justify-between p-4 border-2 rounded-xl cursor-pointer transition-all active:scale-[0.97]" data-value="zh">
+                        <div class="flex items-center gap-4">
+                            <img src="https://flagcdn.com/w40/cn.png" class="w-10 h-10 rounded-full object-cover border" alt="China">
+                            <div>
+                                <p class="font-bold text-gray-900">Chinese</p>
+                                <p class="text-sm text-gray-500">中文</p>
+                            </div>
+                        </div>
+                        <span class="radio-icon material-symbols-outlined text-gray-300">radio_button_unchecked</span>
+                    </div>
+                </div>
+                <button onclick="saveAndFinish()" data-i18n="applaying_lang" class="w-full mt-8 py-4 bg-blue-600 text-white font-bold rounded-full shadow-lg hover:bg-blue-700 active:scale-95 transition-all">
+                    loading...
+                </button>
+            </div>
+
+            <!-- 2. Success View (Hidden) -->
+            <div id="success-view" class="hidden flex flex-col items-center justify-center p-12 text-center animate-in fade-in zoom-in duration-300">
+                <div class="text-6xl mb-4">👋</div>
+                <h2 class="text-2xl font-bold text-gray-800" data-i18n="thank_you_lang">loading...</h2>
+                <p class="text-gray-500 mt-2" data-i18n="thank_lang_des">loading...</p>
+            </div>
+
+        </div>
+    </div>
+    <!-- Header Section -->
+    <header class="pt-[2rem] bg-[#ffffff]">
+        <div class="px-6 mx-auto mr-auto max-w-7xl relative">
+            <h2 data-i18n="my_services" class="text-headline-xl font-headline-xl text-on-surface mb-2">Loading...</h2>
+            <p data-i18n="my_services_des" class="text-body-lg font-body-lg text-secondary max-w-2xl">
+                Loading description...
+            </p>
+            <div onclick="openLangPopup()" data-btn="chooseLang" class="w-[max-content] cursor-pointer flex items-center justify-center sm:absolute right-[0.5rem] top-[0rem] min-w-[max-content] mt-[0.8rem] sm:px-6 px-2 py-2.5 rounded-[50rem] bg-white font-label-md hover:bg-surface-container-low transition-all hover:bg-gray-100 rounded-[5rem] transition-colors active:scale-95">
+                <button class="flex items-center justify-center mr-[0.5rem]">
+                    <span class="material-symbols-outlined">language</span>
+                </button>
+                <span class="mt-[-4.5px]" data-text="content" data-i18n="lang">......</span>
+                <span class="material-symbols-outlined mt-[-4.5px]">arrow_drop_down</span>
+            </div>
+        </div>
+    </header>
+    <!-- this is nav page -->
+    <nav class=" block mx-auto mr-auto sticky top-0 z-10 backdrop-blur-sm bg-[#ffffff]">
+        <!-- Filter Tabs -->
+        <div class="max-w-7xl mr-auto ml-auto px-6">
+            <div data-id="filter-tabs" class="flex gap-2 overflow-x-auto pb-4 mb-10 no-scrollbar pt-[1rem]">
+                <button data-value="all" data-i18n="btn_all" class="min-w-[max-content] px-6 py-2.5 rounded-[50rem] bg-primary text-on-primary font-label-md transition-all">
+                    All
+                </button>
+                <button data-value="photo" data-i18n="btn_photo" class="min-w-[max-content] px-6 py-2.5 rounded-[50rem] bg-white border border-outline-variant text-secondary font-label-md hover:bg-surface-container-low transition-all">
+                    Photo
+                </button>
+                <button data-value="video" data-i18n="btn_video" class="min-w-[max-content] px-6 py-2.5 rounded-[50rem] bg-white border border-outline-variant text-secondary font-label-md hover:bg-surface-container-low transition-all">
+                    Video
+                </button>
+                <button data-value="design" data-i18n="btn_design" class="min-w-[max-content] px-6 py-2.5 rounded-[50rem] bg-white border border-outline-variant text-secondary font-label-md hover:bg-surface-container-low transition-all">
+                    Design
+                </button>
+                <button data-value="website" data-i18n="btn_website" class="min-w-[max-content] px-6 py-2.5 rounded-[50rem] bg-white border border-outline-variant text-secondary font-label-md hover:bg-surface-container-low transition-all">
+                    Web
+                </button>
+            </div>
+        </div>
+    </nav> 
+    <!-- this is content -->
+    <main class="px-6 ml-auto mr-auto max-w-7xl">
+        <div data-id="service-list"  id="service-list" name="service-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+           <!-- --------------data from json file---------------- -->
+        </div>
+    </main>
+    <div data-id="scroll" class="w-[3.5rem] h-[3.5rem] cursor-pointer flex items-center justify-center fixed z-50 right-[1.5rem] bottom-[-5rem] rounded-[50rem] text-on-primary bg-primary transition-all hover:opacity-9 rounded-[5rem] transition-all active:scale-95">
+        <span class="material-symbols-outlined pb-[3px]">navigation</span>
+    </div>
+    <!-- fetch data and action dom on page -->
+    <script src="/service/js/script.js"></script>
+</body>
+</html>

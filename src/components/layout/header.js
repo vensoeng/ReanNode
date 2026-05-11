@@ -28,12 +28,18 @@ export default function Header()
                     {/* <Link to='/login' className="btn">
                         <p>ទំនាក់ទំនង់</p>
                     </Link> */}
-                    <Link to='https://t.me/vensoeng' className="btn">
-                        <p>ទំនាក់ទំនង់</p>
+                    {/* <Link to='/services/' className="btn">
+                        <p>សេវ៉ាកម្ម</p>
                         <div className="icon icon-ra icon-sm ip">
                             <Flash/>
                         </div>
-                    </Link>
+                    </Link> */}
+                    <a href="/service/" className="btn">
+                        <p>សេវាកម្ម</p>
+                        <div className="icon icon-ra icon-sm ip">
+                            <Flash/>
+                        </div>
+                    </a>
                 </div>
             </div>
         </header>
