@@ -1,4 +1,4 @@
-import { Link,NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import '../../assets/css/header.css';
 import favIcon from '../../assets/img/favicon.png';
 import { Flash } from 'iconsax-reactjs';
