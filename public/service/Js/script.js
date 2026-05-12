@@ -68,11 +68,11 @@ function closeLangPopup() {
     if (!isLanguageSet) {
         console.log("No selection made. Defaulting to English.");
         localStorage.setItem('language_set', 'true');
-        localStorage.setItem('user_language', 'en');
+        localStorage.setItem('user_language', 'kh');
     }
     if (!localStorage.getItem('language_set')) {
         localStorage.setItem('language_set', 'true');
-        localStorage.setItem('user_language', 'en');
+        localStorage.setItem('user_language', 'kh');
         window.location.reload();
     }
     // Run change language after form popup close
@@ -243,7 +243,7 @@ btnList.forEach(btn =>
         btnList.forEach(b => b.setAttribute('class', "min-w-[max-content] px-6 py-2.5 rounded-[50rem] bg-white border border-outline-variant text-secondary font-label-md hover:bg-surface-container-low transition-all"));
         //add active class to current button
         btn.setAttribute('class', 'min-w-[max-content] px-6 py-2.5 rounded-[50rem] bg-primary text-on-primary font-label-md transition-all');
-        
+        btn.scrollIntoView({ behavior: 'smooth', inline: 'center' });
         // load data with filter
         const validTypes = ['all','photo', 'video', 'design', 'website']; 
         if(!validTypes.includes(btn.getAttribute('data-value'))){
