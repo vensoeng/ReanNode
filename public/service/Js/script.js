@@ -93,7 +93,7 @@ async function formartServicesLang(service, serviceLists) {
     const lang = localStorage.getItem('user_language') || DEFAULT_LANG;
     const labelsSource = {
         en: { deposit: "Deposit", starting: "STARTING FROM", booking: "BOOKING", avail: "Available", unavail: "Unavailable" },
-        kh: { deposit: "ប្រាក់កក់", starting: "តម្លៃចាប់ពី", booking: "កក់ឥឡូវនេះ", avail: "មានសេវា", unavail: "ផ្អាកសេវា" },
+        kh: { deposit: "ប្រាក់កក់", starting: "តម្លៃចាប់ពី", booking: "កក់ឥឡូវនេះ", avail: "មានសេវាកម្ម", unavail: "ផ្អាកសេវាកម្ម" },
         zh: { deposit: "定金", starting: "起步价", booking: "立即预订", avail: "有空", unavail: "无空" }
     };
     // Get main service list 
