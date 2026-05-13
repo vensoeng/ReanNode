@@ -180,7 +180,7 @@ async function renderServiceCard(service, serviceLists) {
                     <p class="text-[11px] text-zinc-400 uppercase tracking-tighter">${service.labels.starting}</p>
                     <p class="font-title-sm text-title-sm text-[1.3rem]">${service.price}</p>
                 </div>
-                <a class="bg-primary text-white px-4 py-2 rounded-[0.6rem] cursor-pointer text-[0.8rem] active:scale-95 duration-150 transition-all">${service.labels.booking}</a>
+                <a href="https://t.me/vensoeng" class="bg-primary text-white px-4 py-2 rounded-[0.6rem] cursor-pointer text-[0.8rem] active:scale-95 duration-150 transition-all">${service.labels.booking}</a>
             </div>
         </div>
     </div>
