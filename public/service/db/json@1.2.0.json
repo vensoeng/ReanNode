@@ -29,7 +29,8 @@
         "re_change":"price and extras with travel",
         "re_change_kh":"តម្លៃនិងបូកបន្ថែមជាមួយការធ្វើដំណើរ",
         "re_change_zh":"價格及旅遊附加費用",
-        "status": true
+        "status": true,
+        "upper": false
     },
     {
         "list_id": 1,
@@ -39,7 +40,7 @@
         "title_kh":"ថតរូបបែប Lifestyle",
         "title_zh":"生活方式拍摄",
         "description":"Capturing everyday moments with creative angles and natural looks.",
-        "description_kh":"ថតរូបបែបធម្មជាតិ បង្ហាញពីសកម្មភាពប្រចាំថ្ងៃ និងប្លង់ច្នៃប្រឌិត។",
+        "description_kh":"ថតរូបបង្ហាញពីសកម្មភាពប្រចាំថ្ងៃ និងប្លង់ច្នៃប្រឌិត។",
         "description_zh":"捕捉日常生活瞬间，采用创意角度和自然风格。",
         "tags": ["Canon 80D","lens 50MM F1.8","lens 55-250MM", "RAW/JPG"],
         "tags_zh": ["Canon 80D","lens 50MM F1.8","lens 55-250MM", "RAW/JPG"],
@@ -61,7 +62,8 @@
         "re_change":"price and extras with travel",
         "re_change_kh":"តម្លៃនិងបូកបន្ថែមជាមួយការធ្វើដំណើរ",
         "re_change_zh":"價格及旅遊附加費用",
-        "status": true
+        "status": true,
+        "upper": false
     },
     {
         "list_id": 2,
@@ -71,7 +73,7 @@
         "title_kh":"កែរូបភាពកម្រិតមូលដ្ឋាន",
         "title_zh":"基础修图",
         "description":"Color correction, brightness adjustment, and basic cleaning.",
-        "description_kh":"ការសារ៉េពណ៌ ពន្លឺ និងសម្អាតរូបភាពឱ្យមានភាពទាក់ទាញ។",
+        "description_kh":"ការសារ៉េពណ៌ ពន្លឺ និងធ្វើរូបភាពឱ្យមានភាពទាក់ទាញ។",
         "description_zh":"调色、亮度调整及基础人像美化。",
         "tags": ["Adobe lightroom","Adobe CameraRaw","File: RAW/JPG"],
         "tags_zh": ["Adobe lightroom","Adobe CameraRaw","File: RAW/JPG"],
@@ -93,7 +95,8 @@
         "re_change":"We focus only on the color and light of the image.",
         "re_change_kh":"យើងផ្ដោតសំខាន់តែលើពណ៌ និងពន្លឺ នៃរូបប៉ុណ្ណោះ",
         "re_change_zh":"我們只關注影像的色彩和光線。",
-        "status": true
+        "status": true,
+        "upper": false
     },
     {
         "list_id": 2,
@@ -103,7 +106,7 @@
         "title_kh":"កែរូប និងសម្រស់",
         "title_zh":"人像美颜修图",
         "description":"Advanced skin retouching and high-end beauty processing.",
-        "description_kh":"ការកែស្បែកឱ្យម៉ដ្តស្អាត និងការតុបតែងសម្រស់កម្រិតខ្ពស់។",
+        "description_kh":"ការកែស្បែកឱ្យម៉ដ្តស្អាត និងការតុបតែងសម្រស់នៃរូបភាព។",
         "description_zh":"高级皮肤修饰和高端人像美化处理。",
         "tags": ["Adobe lightroom","Adobe CameraRaw","File: RAW/JPG","Skinfinner", "Others plugin"],
         "tags_zh": ["Adobe lightroom","Adobe CameraRaw","File: RAW/JPG","Skinfinner", "Others plugin"],
@@ -125,7 +128,8 @@
         "re_change":"Negotiable for additional modifications.",
         "re_change_kh":"អាចធ្វើការចរចារបានសម្រាប់ការកែប្រែបន្ថែម",
         "re_change_zh":"可協商其他修改方案。",
-        "status": true
+        "status": true,
+        "upper": false
     },
     {
         "list_id": 3,
@@ -143,7 +147,7 @@
         "tags_active": ["Picture 5-10"],
         "tags_active_kh": ["សម្រាប់រូបភាព 5-10"],
         "tags_active_zh": ["适用于5-10张照片"],
-        "price":"$15/upper",
+        "price":"$15",
         "warranty":"Depending on the discussion",
         "warranty_zh":"根據談判情況而定",
         "warranty_kh":"អាស្រ័យលើចរចាគ្នា",
@@ -157,7 +161,8 @@
         "re_change":"price and extras with travel",
         "re_change_kh":"តម្លៃនិងបូកបន្ថែមជាមួយការធ្វើដំណើរ",
         "re_change_zh":"價格及旅遊附加費用",
-        "status": true
+        "status": true,
+        "upper": true
     },
     {
         "list_id": 3,
@@ -167,7 +172,7 @@
         "title_kh":"កញ្ចប់ថត និងកែរូប Lifestyle",
         "title_zh":"生活方式拍摄与修图",
         "description":"Professional shoot and edit for lifestyle branding.",
-        "description_kh":"ថត និងកែរូបភាពបែប Lifestyle សម្រាប់ផ្សព្វផ្សាយម៉ាកយីហោ។",
+        "description_kh":"ថត និងកែរូបភាពបែប Lifestyle រហូតដល់ការកែរូបឱ្យបានស្អាត។",
         "description_zh":"专业生活方式品牌拍摄及后期修图。",
         "tags": ["Canon 80D", "lens 50MM","lens 55-250MM","Adobe lightroom","Adobe CameraRaw","File: RAW/JPG","Skinfinner", "Others plugin"],
         "tags_kh": ["Canon 80D", "lens 50MM","lens 55-250MM","កម្មវិធី lightroom","កម្មវិធី CameraRaw","File: RAW/JPG","Skinfinner", "Others plugin"],
@@ -175,7 +180,7 @@
         "tags_active": ["Picture 10-30"],
         "tags_active_kh": ["សម្រាប់រូបភាព 10-30"],
         "tags_active_zh": ["适用于10-30张照片"],
-        "price":"$18/upper",
+        "price":"$18",
         "warranty":"Actual situation of the image and customer demands",
         "warranty_zh":"影像的實際狀況和客戶需求",
         "warranty_kh":"ស្ថានភាពជាក់ស្ដែងនៃរូបភាព និងការទាមទាររបស់អតិថិជន",
@@ -189,7 +194,8 @@
         "re_change":"price and extras with travel",
         "re_change_kh":"តម្លៃនិងបូកបន្ថែមជាមួយការធ្វើដំណើរ",
         "re_change_zh":"價格及旅遊附加費用",
-        "status": true
+        "status": true,
+        "upper": true
     },
     {
         "list_id": 4,
@@ -221,7 +227,8 @@
         "re_change":"Can request for 2 to 5 times",
         "re_change_kh":"អាចស្នើប្ដូរបាន ២ ទៅ ៥",
         "re_change_zh":"可以请求更改2到5次",
-        "status": true
+        "status": true,
+        "upper": false
     },
     {
         "list_id": 4,
@@ -239,7 +246,7 @@
         "tags_active": ["JPG, PNG","TIF", "PDF","AI"],
         "tags_active_kh": ["JPG, PNG","TIF", "PDF","AI"],
         "tags_active_zh": ["JPG, PNG","TIF", "PDF","AI"],
-        "price":"$15/upper",
+        "price":"$15",
         "warranty":"Depending on the discussion",
         "warranty_zh":"根據談判情況而定",
         "warranty_kh":"អាស្រ័យលើចរចាគ្នា",
@@ -253,7 +260,8 @@
         "re_change":"Can request for 1 to 3 times",
         "re_change_kh":"អាចស្នើប្ដូរបាន ១ ទៅ ៣",
         "re_change_zh":"可以请求更改1到3次",
-        "status": true
+        "status": true,
+        "upper": true
     },
     {
         "list_id": 4,
@@ -263,7 +271,7 @@
         "title_kh":"រចនាទម្រង់ប្រវត្តិរូប (CV)",
         "title_zh":"简历模板设计",
         "description":"Modern and professional CV designs to help you get hired.",
-        "description_kh":"រចនាទម្រង់ប្រវត្តិរូបសង្ខេបឱ្យមានភាពទាក់ទាញ និងអាជីព។",
+        "description_kh":"រចនាទម្រង់ប្រវត្តិរូបសង្ខេបឱ្យមានភាពទាក់ទាញ និងប្រើប្រាសតាមតម្រូវការ។",
         "description_zh":"现代且专业的简历设计，助力职业发展。",
         "tags": ["Adobe Photoshop","Adobe Illustrator","MS Word"],
         "tags_zh": ["Adobe Photoshop","Adobe Illustrator","MS Word"],
@@ -285,7 +293,8 @@
         "re_change":"Can request for 1 to 5 times",
         "re_change_kh":"អាចស្នើប្ដូរបាន ១ ទៅ ៣",
         "re_change_zh":"可以请求更改1到3次",
-        "status": true
+        "status": true,
+        "upper": false
     },
     {
         "list_id": 4,
@@ -317,7 +326,8 @@
         "re_change":"Can request for 1 to 5 times",
         "re_change_kh":"អាចស្នើប្ដូរបាន ១ ទៅ ៣",
         "re_change_zh":"可以请求更改1到3次",
-        "status": true
+        "status": true,
+        "upper": false
     },
     {
         "list_id": 4,
@@ -349,7 +359,8 @@
         "re_change":"Can request for 1 to 3 times",
         "re_change_kh":"អាចស្នើប្ដូរបាន ១ ទៅ ៣",
         "re_change_zh":"可以请求更改1到3次",
-        "status": true
+        "status": true,
+        "upper": false
     },
     {
         "list_id": 5,
@@ -381,7 +392,8 @@
         "re_change":"Can request for 1 to 5 times",
         "re_change_kh":"អាចស្នើប្ដូរបាន ១ ទៅ ៥",
         "re_change_zh":"可以请求更改1到5次",
-        "status": true
+        "status": true,
+        "upper": false
     },
     {
         "list_id": 5,
@@ -399,7 +411,7 @@
         "tags_active": ["2.50s - 3m","File: .mp4, .mov"],
         "tags_active_kh": ["2.50s - 3m","File: .mp4, .mov"],
         "tags_active_zh": ["2.50s - 3m","File: .mp4, .mov"],
-        "price":"$25/upper",
+        "price":"$25",
         "warranty":"Depending on the discussion",
         "warranty_zh":"根據談判情況而定",
         "warranty_kh":"អាស្រ័យលើចរចាគ្នា",
@@ -413,7 +425,8 @@
         "re_change":"Can request for 1 to 5 times",
         "re_change_kh":"អាចស្នើប្ដូរបាន ១ ទៅ ៥",
         "re_change_zh":"可以请求更改1到5次",
-        "status": true
+        "status": true,
+        "upper": true
     },
     {
         "list_id": 6,
@@ -431,7 +444,7 @@
         "tags_active": ["2.50s - 3m","File: .mp4, .mov"],
         "tags_active_kh": ["2.50s - 3m","File: .mp4, .mov"],
         "tags_active_zh": ["2.50s - 3m","File: .mp4, .mov"],
-        "price":"$20/upper",
+        "price":"$20",
         "warranty":"price and extras with travel",
         "warranty_zh":"價格及旅遊附加費用",
         "warranty_kh":"តម្លៃនិងបូកបន្ថែមជាមួយការធ្វើដំណើរ",
@@ -445,7 +458,8 @@
         "re_change":"Can request for 1 to 5 times",
         "re_change_kh":"អាចស្នើប្ដូរបាន ១ ទៅ ៥",
         "re_change_zh":"可以请求更改1到5次",
-        "status": true
+        "status": true,
+        "upper": true
     },
     {
         "list_id": 7,
@@ -463,7 +477,7 @@
         "tags_active": ["One-Page Site","Static only","Hosting none"],
         "tags_active_kh": ["One-Page Site","Static only","Hosting none"],
         "tags_active_zh": ["One-Page Site","Static only","Hosting none"],
-        "price":"$35-50/upper",
+        "price":"$35-50",
         "warranty":"",
         "warranty_zh":"",
         "warranty_kh":"ធានាចំពោះ១៥ថ្ងៃបន្ទាប់ពីការផ្តល់សេវា",
@@ -477,7 +491,8 @@
         "re_change":"",
         "re_change_kh":"អាចស្នើប្ដូរកន្លែងមិនពេញចិត្តបាន ១ ទៅ 3ដង",
         "re_change_zh":"",
-        "status": true
+        "status": true,
+        "upper": true
     },
     {
         "list_id": 7,
@@ -495,7 +510,7 @@
         "tags_active": ["3-Page only","Dynamic portfolios","Add Categories","Update blog","Update about","Hosting none"],
         "tags_active_kh": ["3-Page only","DB: XAMPP","Dynamic portfolios","Add Categories","Update blog","Update about","Hosting none"],
         "tags_active_zh": ["3-Page only","DB: XAMPP","Dynamic portfolios","Add Categories","Update blog","Update about","Hosting none"],
-        "price":"$50/upper",
+        "price":"$50",
         "warranty":"",
         "warranty_zh":"",
         "warranty_kh":"ធានាចំពោះ១៥ថ្ងៃបន្ទាប់ពីការផ្តល់សេវា",
@@ -509,7 +524,8 @@
         "re_change":"",
         "re_change_kh":"អាចស្នើប្ដូរកន្លែងមិនពេញចិត្តបាន ១ ទៅ 3ដង",
         "re_change_zh":"",
-        "status": true
+        "status": true,
+        "upper": true
     },
     {
         "list_id": 8,
@@ -527,7 +543,7 @@
         "tags_active": ["3-page only","DB: XAMPP","Dynamic","Hosting none"],
         "tags_active_kh": ["3-page only","DB: XAMPP","Dynamic","Hosting none"],
         "tags_active_zh": ["3-page only","DB: XAMPP","Dynamic","Hosting none"],
-        "price":"$100/upper",
+        "price":"$100",
         "warranty":"1 month warranty after service",
         "warranty_zh":"售後服務後可享1個月保固。",
         "warranty_kh":"ធានាជូន១ខែបន្ទាប់ពីការផ្តល់សេវា",
@@ -541,7 +557,8 @@
         "re_change":"Can request for 1 to 3 times",
         "re_change_kh":"អាចស្នើប្ដូរកន្លែងមិនពេញចិត្តបាន ១ ទៅ 3ដង",
         "re_change_zh":"如果不满可以申请更换地点1到3次",
-        "status": true
+        "status": true,
+        "upper": true
     },
     {
         "list_id": 8,
@@ -559,7 +576,7 @@
         "tags_active": ["3-page only","DB: XAMPP","Dynamic","Hosting none"],
         "tags_active_kh": ["3-page only","DB: XAMPP","Dynamic","Hosting none"],
         "tags_active_zh": ["3-page only","DB: XAMPP","Dynamic","Hosting none"],
-        "price":"$150/upper",
+        "price":"$150",
         "warranty":"1 month warranty after service",
         "warranty_zh":"售後服務後可享1個月保固。",
         "warranty_kh":"ធានាជូន១ខែបន្ទាប់ពីការផ្តល់សេវា",
@@ -573,7 +590,8 @@
         "re_change":"Can request for 1 to 3 times",
         "re_change_kh":"អាចស្នើប្ដូរកន្លែងមិនពេញចិត្តបាន ១ ទៅ 3ដង",
         "re_change_zh":"如果不满可以申请更换地点1到3次",
-        "status": true
+        "status": true,
+        "upper": true
     },
     {
         "list_id": 8,
@@ -591,7 +609,7 @@
         "tags_active": ["3-page only","DB: XAMPP","Dynamic","Hosting none","Telegram Bot","Excel/Reports","Print PDF"],
         "tags_active_kh": ["3-page only","DB: XAMPP","Dynamic","Hosting none","Telegram Bot","Excel/Reports","Print PDF"],
         "tags_active_zh": ["3-page only","DB: XAMPP","Dynamic","Hosting none","Telegram Bot","Excel/Reports","Print PDF"],
-        "price":"$250/upper",
+        "price":"$250",
         "warranty":"1 month warranty after service",
         "warranty_zh":"售後服務後可享1個月保固。",
         "warranty_kh":"ធានាជូន១ខែបន្ទាប់ពីការផ្តល់សេវា",
@@ -605,6 +623,7 @@
         "re_change":"Can request for 1 to 3 times",
         "re_change_kh":"អាចស្នើប្ដូរកន្លែងមិនពេញចិត្តបាន ១ ទៅ 3ដង",
         "re_change_zh":"如果不满可以申请更换地点1到3次",
-        "status": true
+        "status": true,
+        "upper": true
     }
 ]

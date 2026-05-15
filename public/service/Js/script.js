@@ -92,9 +92,9 @@ function closeLangPopup() {
 async function formartServicesLang(service, serviceLists) {
     const lang = localStorage.getItem('user_language') || DEFAULT_LANG;
     const labelsSource = {
-        en: { deposit: "Deposit", starting: "STARTING FROM", booking: "BOOKING", avail: "Available", unavail: "Unavailable" },
-        kh: { deposit: "ប្រាក់កក់", starting: "តម្លៃចាប់ពី", booking: "កក់ឥឡូវនេះ", avail: "មានសេវាកម្ម", unavail: "ផ្អាកសេវាកម្ម" },
-        zh: { deposit: "定金", starting: "起步价", booking: "立即预订", avail: "有空", unavail: "无空" }
+        en: { deposit: "Deposit", warranty: "Warranty", starting: "STARTING FROM", booking: "BOOKING", avail: "Available", unavail: "Unavailable" },
+        kh: { deposit: "ប្រាក់កក់", warranty: "ការធានា", starting: "តម្លៃចាប់ពី", booking: "កក់ឥឡូវនេះ", avail: "មានសេវាកម្ម", unavail: "ផ្អាកសេវាកម្ម" },
+        zh: { deposit: "定金", warranty: "保修", starting: "起步价", booking: "立即预订", avail: "有空", unavail: "无空" }
     };
     // Get main service list 
     const list = serviceLists.find(item => item.list_id === service.list_id);
@@ -113,7 +113,8 @@ async function formartServicesLang(service, serviceLists) {
         re_change: service[`re_change_${lang}`] || service.re_change,
         status: service.status,
         labels: labelsSource[lang] || labelsSource['en'],
-        img: list ? list.icon : `${DATA_URL}/public/img/favicon.png`
+        img: list ? list.icon : `${DATA_URL}/public/img/favicon.png`,
+        upper: service.upper || false
     };
 }
 
@@ -168,7 +169,7 @@ async function renderServiceCard(service, serviceLists) {
                 </div>
                 <div class="flex items-start gap-2 text-on-surface-variant pt-4">
                     <span class="material-symbols-outlined text-[1.1rem] flex items-center pt-[4px]">fertile</span>
-                    <span class="text-[14px] font-medium">${service.warranty}</span>
+                    <span class="text-[14px] font-medium">${service.labels.warranty}: ${service.warranty}</span>
                 </div>
                 <div class="flex items-start gap-2 text-on-surface-variant pt-4 pb-6">
                     <span class="material-symbols-outlined text-[1.1rem] flex items-center pt-[4px]">crisis_alert</span>
@@ -176,9 +177,9 @@ async function renderServiceCard(service, serviceLists) {
                 </div>
             </div>
             <div class="flex justify-between items-end mt-auto pt-6 border-t border-zinc-50">
-                <div>
+                <div class="">
                     <p class="text-[11px] text-zinc-400 uppercase tracking-tighter">${service.labels.starting}</p>
-                    <p class="font-title-sm text-title-sm text-[1.3rem]">${service.price}</p>
+                    <p class="font-title-sm text-title-sm text-[1.3rem] flex items-end">${service.price} ${service.upper ? '<span class="ml-[0.2rem] pb-[5px] text-[11px] uppercase tracking-tighter">upper</span>' : ''}</p>
                 </div>
                 <a href="https://t.me/vensoeng" class="bg-primary text-white px-4 py-2 rounded-[0.6rem] cursor-pointer text-[0.8rem] active:scale-95 duration-150 transition-all">${service.labels.booking}</a>
             </div>
