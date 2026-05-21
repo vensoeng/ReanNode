@@ -29,7 +29,7 @@
         "re_change":"price and extras with travel",
         "re_change_kh":"តម្លៃនិងបូកបន្ថែមជាមួយការធ្វើដំណើរ",
         "re_change_zh":"價格及旅遊附加費用",
-        "status": true,
+        "status": false,
         "upper": false
     },
     {
@@ -62,7 +62,7 @@
         "re_change":"price and extras with travel",
         "re_change_kh":"តម្លៃនិងបូកបន្ថែមជាមួយការធ្វើដំណើរ",
         "re_change_zh":"價格及旅遊附加費用",
-        "status": true,
+        "status": false,
         "upper": false
     },
     {
@@ -161,7 +161,7 @@
         "re_change":"price and extras with travel",
         "re_change_kh":"តម្លៃនិងបូកបន្ថែមជាមួយការធ្វើដំណើរ",
         "re_change_zh":"價格及旅遊附加費用",
-        "status": true,
+        "status": false,
         "upper": true
     },
     {
@@ -194,7 +194,7 @@
         "re_change":"price and extras with travel",
         "re_change_kh":"តម្លៃនិងបូកបន្ថែមជាមួយការធ្វើដំណើរ",
         "re_change_zh":"價格及旅遊附加費用",
-        "status": true,
+        "status": false,
         "upper": true
     },
     {
@@ -445,9 +445,9 @@
         "tags_active_kh": ["2.50s - 3m","File: .mp4, .mov"],
         "tags_active_zh": ["2.50s - 3m","File: .mp4, .mov"],
         "price":"$20",
-        "warranty":"price and extras with travel",
-        "warranty_zh":"價格及旅遊附加費用",
-        "warranty_kh":"តម្លៃនិងបូកបន្ថែមជាមួយការធ្វើដំណើរ",
+        "warranty":"Depending on the discussion",
+        "warranty_zh":"根據談判情況而定",
+        "warranty_kh":"អាស្រ័យលើចរចាគ្នា",
         "deposit":"50%",
         "time":"Mon-Sat 8:30PM • Sun 9:00AM",
         "time_kh":"ច័ន្ទ-សៅរ៍ 8:30PM • អាទិត្យ 9:00AM",
@@ -456,9 +456,9 @@
         "location_zh":"金边 斯通米恩",
         "location_kh": "Online • ភ្នំពេញ ស្ទឹងមានជ័យ",
         "re_change":"Can request for 1 to 5 times",
-        "re_change_kh":"អាចស្នើប្ដូរបាន ១ ទៅ ៥",
+        "re_change_kh":"តម្លៃនិងបូកបន្ថែមជាមួយការធ្វើដំណើរ",
         "re_change_zh":"可以请求更改1到5次",
-        "status": true,
+        "status": false,
         "upper": true
     },
     {

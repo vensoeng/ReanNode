@@ -132,9 +132,9 @@ async function renderServiceCard(service, serviceLists) {
                     <img src="/logo192.png" class="" alt="" width="40">
                 </div>
             </div>
-            <div class="bg-white border backdrop-blur-md px-2 py-2 rounded-[5px] flex items-center gap-1.5">
+            <div class="bg-white border backdrop-blur-md px-2 py-2 rounded-[5px] flex items-center gap-1.5 ${service.status ? '' : 'bg-black/5'}">
                 <!-- <span class="w-1.5 h-1.5 rounded-full bg-green-600"></span> -->
-                <span class="text-[10px] font-bold text-green-700 uppercase tracking-widest">${service.status ? service.labels.avail : service.labels.unavail}</span>
+                <span class="text-[10px] font-bold text-green-700 uppercase tracking-widest ${service.status ? '' : 'text-on-surface-variant'}">${service.status ? service.labels.avail : service.labels.unavail}</span>
             </div>
         </div>
         <div class="p-5 pt-[0rem]">
@@ -182,7 +182,7 @@ async function renderServiceCard(service, serviceLists) {
                     <p class="text-[11px] text-zinc-400 uppercase tracking-tighter">${service.labels.starting}</p>
                     <p class="font-title-sm text-title-sm text-[1.3rem] flex items-end">${service.price} ${service.upper ? '<span class="ml-[0.2rem] pb-[5px] text-[11px] uppercase tracking-tighter">upper</span>' : ''}</p>
                 </div>
-                <a href="https://t.me/vensoeng" class="bg-primary text-white px-4 py-2 rounded-[0.6rem] cursor-pointer text-[0.8rem] active:scale-95 duration-150 transition-all">${service.labels.booking}</a>
+                <a ${service.status ? 'href="https://t.me/vensoeng"' : ''}" class="${service.status ? 'text-white bg-primary' : 'bg-black/5 '}  px-4 py-2 rounded-[0.6rem] cursor-pointer text-[0.8rem] active:scale-95 duration-150 transition-all">${service.labels.booking}</a>
             </div>
         </div>
     </div>
