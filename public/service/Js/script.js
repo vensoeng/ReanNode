@@ -119,6 +119,7 @@ async function formartServicesLang(service, serviceLists) {
 }
 
 // post data to dom
+//  <img src="${DATA_URL}/img/${service.img}" class="" alt="" width="40">
 async function renderServiceCard(service, serviceLists) {
     // fomart service after get lang from local storage
     service = await formartServicesLang(service, serviceLists);
@@ -128,7 +129,7 @@ async function renderServiceCard(service, serviceLists) {
             <div class="w-[4rem] h-[4rem] rounded-[50rem] bg-zinc-50 border border-zinc-100 flex items-center justify-center">
                 <!-- <span class="material-symbols-outlined text-primary text-3xl" data-icon="architecture">architecture</span> -->
                 <div class="w-[3.5rem] h-[3.5rem] rounded-[50rem] bg-white overflow-hidden flex items-center justify-center">
-                    <img src="${DATA_URL}/img/${service.img}" class="" alt="" width="40">
+                    <img src="/logo192.png" class="" alt="" width="40">
                 </div>
             </div>
             <div class="bg-white border backdrop-blur-md px-2 py-2 rounded-[5px] flex items-center gap-1.5">
