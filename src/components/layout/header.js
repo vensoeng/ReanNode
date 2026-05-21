@@ -35,7 +35,7 @@ export default function Header()
                         </div>
                     </Link> */}
                     <a href="/service/" className="btn">
-                        <p>សេវាកម្ម</p>
+                        <p>ទទួលសេវាកម្ម</p>
                         <div className="icon icon-ra icon-sm ip">
                             <Flash/>
                         </div>
