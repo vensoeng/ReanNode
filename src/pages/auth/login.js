@@ -1,6 +1,5 @@
 import '../../assets/css/login.css';
-import { Record, Hashtag, Book1 } from 'iconsax-reactjs';
-import Button from '../../components/common/button';
+import { Hashtag } from 'iconsax-reactjs';
 
 export default function LoginPage()
 {
