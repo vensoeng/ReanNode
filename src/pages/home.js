@@ -1,5 +1,6 @@
 import '../assets/css/home.css';
 import Button from '../components/common/button';
+import AdvertisementPopup from '../components/common/AdvertisementPopup';
 import { Record, Hashtag, Book1 } from 'iconsax-reactjs';
 import AboutPage from './about';
 import StoryPage from './story';
@@ -239,6 +240,8 @@ export default function HomePage()
                     <AboutPage/>  
                     {/* this is show my story  */}
                     <StoryPage />
+                    {/* AdvertisementPopup  */}
+                    <AdvertisementPopup/>
                 </div>
             </div>
         </main>
