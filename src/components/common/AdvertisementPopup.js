@@ -59,7 +59,7 @@ export default function AdvertisementPopup() {
     section: {
       position: 'fixed',
       height: 'max-content',
-      zIndex: 100000,
+      zIndex: 100000000000000,
       right: '1.5rem',
       bottom: '1.5rem',
       width: '300px',
