@@ -1,0 +1,195 @@
+.web-head{
+    position: fixed;
+    right: 0rem;
+    width: calc(100% - 250px);
+    height: max-content;
+    background: var(--sg-bglight);
+    border-bottom: 1px solid var(--colorBorder-00);
+}
+.wh-box{
+    height: 75px;
+    margin: 0rem 0.8rem;
+}
+.wh-box .row-box{
+    gap: 0.8rem;
+}
+.wh-box .logo{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50rem;
+    object-fit: cover;
+    background: var(--sg-color-brand);
+}
+.wh-box .row-box h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.wh-box .row-box ul{
+    gap: 0.8rem;
+}
+.wh-box .row-box ul button{
+    cursor: pointer;
+    color: var(--sg-color-brand);
+    background: transparent;
+}
+.wh-box .row-box ul button a{
+    gap: 0.5rem;
+    color: var(--sg-color-brand);
+}
+.wh-box .row-box ul button a path{
+    stroke: var(--sg-color-brand);
+}
+.wh-box .user-infor{
+    cursor: pointer;
+    padding: 0rem 0.5rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--colorBorder-00);
+    gap: 0.8rem;
+    background: var(--sg-bglight);
+}
+.wh-box .user-profile{
+    width: 1.8rem;
+    height: 1.8rem;
+    overflow: hidden;
+    border-radius: 50rem;
+}
+.wh-box .row-box .toggle-menu .menu-box{
+    display: none;
+    border-radius: 50rem;
+    cursor: pointer;
+}
+.wh-box .row-box .toggle-menu .menu-box:active{
+    background-color: var(--sg-mainbgcolot-bluedarkhover);
+}
+/* ============this is asside ================> */
+.web-aside{
+    position: sticky;
+    top: 0;
+    width: calc(100%);
+    max-width: 250px;
+    height: 100vh;
+    background: var(--sg-bglight);
+    border-right: 1px solid var(--colorBorder-00);
+}
+.wa-head .wah-box{
+    height: 75px;
+    margin: 0rem 0.8rem;
+}
+.wa-head .wah-box h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.wa-head .wah-box .wah-action{
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 50rem;
+    transition: all ease-in-out 0.3s;
+}
+.wa-head .wah-box .wah-action:active{
+    scale: 0.97;
+    background: var(--sg-mainbgcolot-bluedarkhover);
+}
+.wa-con .wac-box{
+    width: 100%;
+    max-width: 100%;
+    height:  calc(100vh - 195px);
+    overflow: hidden;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+.wa-con .wac-box::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.wa-con .wac-box::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 10px;
+}
+.wa-con .wac-box::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+.wa-con .wac-box{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.wa-con .wac-box ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.wa-con .wac-box li{
+    margin: 0 auto;
+    width: calc(100% - 1rem );
+}
+.wa-con .wac-box li a{
+    cursor: pointer;
+    padding: 0rem 0.8rem;
+    margin: 0 auto;
+    gap: 0.8rem;
+    border-radius: 0.8rem;
+    height: 60px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all ease-in-out 0.3s;
+}
+.wa-con .wac-box li a:hover,
+.wa-con .wac-box li a.active,
+.wa-con .wac-box li a:active,
+.wa-con .wac-box li a:focus{
+    color: var(--sg-color-brand);
+    background: #e0e9fb2b;
+}
+.wa-con .wac-box li .icon svg{
+    width: 27px;
+}
+.wa-con .wac-box li a:active{
+    scale: 0.95;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+.wa-con .wac-box li a:hover path,
+.wa-con .wac-box li a.active path,
+.wa-con .wac-box li a:active path,
+.wa-con .wac-box li a:focus path{
+    stroke: var(--sg-color-brand);
+}
+.wa-foot{
+    position: absolute;
+    bottom: -2.5rem;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    overflow: hidden;
+    border-radius: 1rem;
+    z-index: 1;
+    width: calc(100% - 1rem);
+    background: var(--sgbgBlack-hover);
+}
+.wa-foot .waf-box{
+    padding: 1rem;
+}
+.wa-foot .waf-box blockquote {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.wa-foot .waf-box blockquote p{
+    line-height: 1.5;
+}
+.wa-foot .waf-box blockquote a{
+    margin-top: -5px;
+    color: var(--sg-color-brand);
+}
+.wa-foot .waf-box blockquote a:hover{
+    text-decoration: underline;
+}
+
+/* ===============admin page  */
+.admin-shell{
+    display: flex;
+}
+.admin-page{
+    width: calc(100% - 250px);
+    margin-right: auto;
+    margin-top: 75px;
+}
