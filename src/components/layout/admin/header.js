@@ -1,11 +1,10 @@
 
 import { useState, useEffect } from 'react';
-import profile from '../../../assets/img/logo192.png';
 import imgTest from '../../../assets/img/alien.jpg';
 import '../../../assets/css/admin/header.css';
 import Button from '../../../components/common/button';
 import { getAuthUser } from '../../../utils/auth';
-import { HamburgerMenu , LoginCurve, Magicpen, HomeHashtag, VideoOctagon, Designtools, Gift, Dropbox} from 'iconsax-reactjs';
+import { HamburgerMenu , Magicpen, HomeHashtag, VideoOctagon, Designtools, Gift, Dropbox} from 'iconsax-reactjs';
 export const API_URL = process.env.API_URL || "http://localhost:5000";
 export const STORAGE = process.env.STORAGE || "/images/storage/";
 
@@ -42,7 +41,7 @@ export default function AdminHeader() {
                             <ul className='df-c'>
                                 <li>
                                     <Button>
-                                        <a className='df-l'>
+                                        <a href='/service' className='df-l'>
                                             <Magicpen />
                                             <p>ផ្សព្វផ្សាយ</p>
                                         </a>
@@ -82,7 +81,7 @@ export default function AdminHeader() {
                             {/* aside menu  */}
                             <ul>
                                 <li>
-                                    <a className='df-l active'>
+                                    <a href='/service' className='df-l active'>
                                         <div className='icon icon-sm over-h df-c'>
                                             <HomeHashtag />
                                         </div>
@@ -90,7 +89,7 @@ export default function AdminHeader() {
                                     </a>
                                 </li>
                                 <li>
-                                    <a className='df-l'>
+                                    <a href='/service' className='df-l'>
                                         <div className='icon icon-sm over-h df-c'>
                                             <Magicpen />
                                         </div>
@@ -98,7 +97,7 @@ export default function AdminHeader() {
                                     </a>
                                 </li>
                                 <li>
-                                    <a className='df-l'>
+                                    <a href='/service' className='df-l'>
                                         <div className='icon icon-sm over-h df-c'>
                                             <VideoOctagon />
                                         </div>
@@ -106,7 +105,7 @@ export default function AdminHeader() {
                                     </a>
                                 </li>
                                 <li>
-                                    <a className='df-l'>
+                                    <a href='/service' className='df-l'>
                                         <div className='icon icon-sm over-h df-c'>
                                             <Designtools />
                                         </div>
@@ -114,7 +113,7 @@ export default function AdminHeader() {
                                     </a>
                                 </li>
                                 <li>
-                                    <a className='df-l'>
+                                    <a href='/service' className='df-l'>
                                         <div className='icon icon-sm over-h df-c'>
                                             <Dropbox />
                                         </div>
@@ -122,7 +121,7 @@ export default function AdminHeader() {
                                     </a>
                                 </li>
                                 <li>
-                                    <a className='df-l'>
+                                    <a href='/service' className='df-l'>
                                         <div className='icon icon-sm over-h df-c'>
                                             <Gift />
                                         </div>
@@ -138,7 +137,7 @@ export default function AdminHeader() {
                             {/* version  */}
                             <blockquote>
                                 <p>សូមស្វាគមន៍យើងនៅទីនេះដើម្បីអ្នករាល់គ្នា!</p>
-                                <a>@Version 1.0.0</a>
+                                <a href='/service'>@Version 1.0.0</a>
                             </blockquote>
                         </div>
                     </div>
