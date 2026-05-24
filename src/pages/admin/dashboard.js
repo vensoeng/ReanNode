@@ -4,9 +4,12 @@ import { API_URL, getAccessToken, clearAuthStorage , STORAGE } from '../../utils
 import '../../assets/css/admin/dashboard.css';
 
 export default function Dashboard() {
+  // const [user, setUser] = useState(null);
+  // const [loading, setLoading] = useState(true);
+  // const [error, setError] = useState('');
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
+  const [error] = useState('');
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -49,7 +52,11 @@ export default function Dashboard() {
       {user ? (
         <>
           <div className='admin-content'>
-            <img src={API_URL + STORAGE + user.pr_img} width={35} />
+            <img
+              src={API_URL + STORAGE + user.pr_img}
+              width={35}
+              alt="User profile"
+            />
             <p>Welcome back, <strong>{user.username || user.email}</strong></p>
             <p>Role: {user.role}</p>
           </div>
