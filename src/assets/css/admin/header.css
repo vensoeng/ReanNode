@@ -18,7 +18,7 @@
     height: 3rem;
     border-radius: 50rem;
     object-fit: cover;
-    background: var(--sg-color-brand);
+    /* background: var(--sg-color-brand); */
 }
 .wh-box .row-box h1{
     font-size: 1.5rem;
