@@ -3,18 +3,31 @@ import { useState, useEffect } from 'react';
 import imgTest from '../../../assets/img/alien.jpg';
 import '../../../assets/css/admin/header.css';
 import Button from '../../../components/common/button';
+import { NavLink , useLocation } from 'react-router-dom';
 import { getAuthUser } from '../../../utils/auth';
-import { HamburgerMenu , Magicpen, HomeHashtag, VideoOctagon, Designtools, Gift, Dropbox} from 'iconsax-reactjs';
-export const API_URL = process.env.API_URL || "https://vensoengapi.vercel.app";
+import { HamburgerMenu, Magicpen, HomeHashtag, VideoOctagon, Designtools, Gift, Dropbox} from 'iconsax-reactjs';
+export const API_URL = process.env.API_URL || 'http://localhost:5000';
 export const STORAGE = process.env.STORAGE || "/images/storage/";
 
 export default function AdminHeader() {
     const [user, setUser] = useState(null);
+    const location = useLocation();
 
     useEffect(() => {
         const authUser = getAuthUser();
         setUser(authUser);
     }, []);
+
+    const getPageTitle = () => {
+        switch (location.pathname) {
+            case '/dashboard':
+                return 'ផ្ទាំងគ្រប់គ្រង';
+            case '/admin/blogs':
+                return 'ផ្សព្វផ្សាយ';
+            default:
+                return 'ផ្ទាំងគ្រប់គ្រង';
+        }
+    };
 
     const displayName = user?.name || user?.username || user?.email || 'Vensoeng';
     const avatarSrc = user?.pr_img || imgTest;
@@ -31,7 +44,7 @@ export default function AdminHeader() {
                                 <img src={profile} className='img-c' loading="lazy" />
                             </div> */}
                             <div className='txt'>
-                                <h1>ផ្ទាំងគ្រប់គ្រង</h1>
+                                <h1>{getPageTitle()}</h1>
                             </div>
                         </div>
                     </div>
@@ -41,10 +54,10 @@ export default function AdminHeader() {
                             <ul className='df-c'>
                                 <li>
                                     <Button>
-                                        <a href='/service' className='df-l'>
+                                        <NavLink to="/admin/blogs" className='df-c'>
                                             <Magicpen />
-                                            <p>ផ្សព្វផ្សាយ</p>
-                                        </a>
+                                            <span>ផ្សព្វផ្សាយ</span>
+                                        </NavLink>
                                     </Button>
                                 </li>
                             </ul>
@@ -81,20 +94,20 @@ export default function AdminHeader() {
                             {/* aside menu  */}
                             <ul>
                                 <li>
-                                    <a href='/service' className='df-l active'>
+                                    <NavLink className={({ isActive }) => isActive ? "df-l active" : "df-l"} to="/dashboard">
                                         <div className='icon icon-sm over-h df-c'>
                                             <HomeHashtag />
                                         </div>
                                         <p>ផ្ទាំងគ្រប់គ្រង</p>
-                                    </a>
+                                    </NavLink>
                                 </li>
                                 <li>
-                                    <a href='/service' className='df-l'>
+                                    <NavLink className={({ isActive }) => isActive ? "df-l active" : "df-l"} to="/admin/blogs">
                                         <div className='icon icon-sm over-h df-c'>
                                             <Magicpen />
                                         </div>
                                         <p>ផ្សព្វផ្សាយ</p>
-                                    </a>
+                                    </NavLink>
                                 </li>
                                 <li>
                                     <a href='/service' className='df-l'>

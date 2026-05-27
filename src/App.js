@@ -17,6 +17,8 @@ import RequireAuth from './components/route/RequireAuth';
 import AdminHeader from './components/layout/admin/header';
 // page 
 import Dashboard from './pages/admin/dashboard';
+import AdminBlogs from './pages/admin/blogs'
+
 function MainLayout() {
   return (
     <>
@@ -56,6 +58,7 @@ function RoutePage() {
       {/* admin */}
       <Route element={<RequireAuth><AdminLayout /></RequireAuth>}>
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/admin/blogs" element={<AdminBlogs />} />
       </Route>
 
     </Routes>

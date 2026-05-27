@@ -1,0 +1,69 @@
+.admin-content{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.adincard{
+    max-width: 1200px;
+    margin: 0 1rem;
+    margin-top: 2rem;
+    background: var(--sg-bglight);
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+.adincard .pr-main{
+    width: 150px;
+    height: 150px;
+    border-radius: 0.8rem;
+    overflow: hidden;
+}
+.adincard .pr-img{
+    width: 100%;
+}
+.adincard .box{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+.adincard .sub{
+    width: calc(100% - 150px);
+}
+.adincard .sub .sub-box{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.adincard .sub h2{
+    font-size: 1.25rem;
+}
+.adincard .sub p{
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+.adincard .adincard-action a{
+    padding: 1.2rem 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    color: var(--sg-color-brand);
+    background: var(--sg-bglight);
+    border: 1.5px solid var(--sg-color-brand);
+    border-style: dashed;
+}
+.adincardbox-action{
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: max-content;
+    height: max-content;
+    border-radius: 50rem;
+    overflow: hidden;
+    background: var(--sg-color-brand);
+}
+.adincardbox-action path{
+    stroke: var(--sg-bglight);
+}

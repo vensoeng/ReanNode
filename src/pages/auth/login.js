@@ -145,7 +145,7 @@ export default function LoginPage() {
                   </div>
                 </div>
                 <div className='txt-action'>
-                  <a href='/service'>ភ្លេចពាក្យសម្ងាត់?</a>
+                  <a href='/'>ភ្លេចពាក្យសម្ងាត់?</a>
                 </div>
               </div>
             </div>
@@ -160,7 +160,7 @@ export default function LoginPage() {
                 <div className='ff-info'>
                   <blockquote>
                     មិនទាន់មានគណនី?
-                    <a href='/service' className='df-s'>បង្កើតគណនី <ArrowRight /></a>
+                    <a href='/' className='df-s'>បង្កើតគណនី <ArrowRight /></a>
                   </blockquote>
                 </div>
               </div>

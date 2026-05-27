@@ -5,6 +5,7 @@
     height: max-content;
     background: var(--sg-bglight);
     border-bottom: 1px solid var(--colorBorder-00);
+    z-index: 100000000;
 }
 .wh-box{
     height: 75px;
@@ -21,7 +22,7 @@
     /* background: var(--sg-color-brand); */
 }
 .wh-box .row-box h1{
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 600;
 }
 .wh-box .row-box ul{
@@ -77,7 +78,7 @@
     margin: 0rem 0.8rem;
 }
 .wa-head .wah-box h2{
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 600;
 }
 .wa-head .wah-box .wah-action{
@@ -163,7 +164,7 @@
     border-radius: 1rem;
     z-index: 1;
     width: calc(100% - 1rem);
-    background: var(--sgbgBlack-hover);
+    background: var(--sg-bgblack);
 }
 .wa-foot .waf-box{
     padding: 1rem;
@@ -187,6 +188,7 @@
 /* ===============admin page  */
 .admin-shell{
     display: flex;
+    background: var(--sg-bgblack);
 }
 .admin-page{
     width: calc(100% - 250px);

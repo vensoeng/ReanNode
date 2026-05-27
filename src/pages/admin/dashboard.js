@@ -1,69 +1,57 @@
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { API_URL, getAccessToken, clearAuthStorage , STORAGE } from '../../utils/auth';
+import { API_URL, STORAGE, getAuthUser } from '../../utils/auth';
+import { ExportCircle } from 'iconsax-reactjs';
 import '../../assets/css/admin/dashboard.css';
 
 export default function Dashboard() {
-  // const [user, setUser] = useState(null);
-  // const [loading, setLoading] = useState(true);
-  // const [error, setError] = useState('');
-  const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error] = useState('');
-  const navigate = useNavigate();
+  const [me, setMe] = useState(null);
 
   useEffect(() => {
-    const loadUser = async () => {
-      try {
-        const response = await fetch(`${API_URL}/auth/dashboard`, {
-          headers: {
-            Authorization: `Bearer ${getAccessToken()}`
-          }
-        });
+    const authUser = getAuthUser();
+    setMe(authUser);
+  }, []);
 
-        if (!response.ok) {
-          clearAuthStorage();
-          navigate('/login', { replace: true });
-          return;
-        }
-
-        const data = await response.json();
-        setUser(data.user);
-        console.log(data);
-      } catch (err) {
-        clearAuthStorage();
-        navigate('/login', { replace: true });
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    loadUser();
-  }, [navigate]);
-
-  if (loading) {
-    return <div>Loading dashboard...</div>;
+  if (!me) {
+    return <div style={{ padding: '20px' }}>កំពុងទាញយកទិន្នន័យ...</div>;
   }
 
   return (
     <div>
-      <h1>Dashboard</h1>
-      {error && <p style={{ color: '#f87171' }}>{error}</p>}
-      {user ? (
-        <>
-          <div className='admin-content'>
-            <img
-              src={API_URL + STORAGE + user.pr_img}
-              width={35}
-              alt="User profile"
-            />
-            <p>Welcome back, <strong>{user.username || user.email}</strong></p>
-            <p>Role: {user.role}</p>
+      <div className='admin-content'>
+        <div className='adincard'>
+          <div className='box'>
+            <div className='pr-main'>
+              <div className='pr-img'>
+                <img
+                  className='img-c'
+                  src={`${API_URL}${STORAGE}${me.pr_img}`}
+                  width={35}
+                  alt="User profile"
+                />
+              </div>
+            </div>
+            <div className='sub'>
+              <div className='sub-box'>
+                <h2>សួស្ដី {me.firstName} {me.lastName} ជាទីស្រលាញ់!</h2>
+                <blockquote>
+                  <p>
+                    យើងបានពិនិត្យឃើញថាបច្ចុប្បន្នអ្នកស្មោះពេកហើយ អ្នកគួរតែឆ្លៀតពេលឱ្យខ្លួនឯងចេះសាវ៉ាខ្លះ កុំស្មោះពេកអាស្មោះ។
+                    យើងឃើញថាអ្នកជិតដល់ថ្ងៃបង់អង្គការហើយ ប្រញាប់រកប្រាក់ឱ្យគ្រប់។
+                  </p>
+                </blockquote>
+                <div className='adincard-action'>
+                  <a href='/' className='btn'>ធ្វើការបង់ប្រាក់</a>
+                </div>
+              </div>
+            </div>
+            <div className='adincardbox-action'>
+              <a href='/' className='icon icon-sm df-c over-h'>
+                <ExportCircle />
+              </a>
+            </div>
           </div>
-        </>
-      ) : (
-        <p>You must be logged in to use the dashboard.</p>
-      )}
+        </div>
+      </div>
     </div>
   );
 }
