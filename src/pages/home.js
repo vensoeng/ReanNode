@@ -1,5 +1,6 @@
 import '../assets/css/home.css';
 import Button from '../components/common/button';
+import ProjectBackground from '../components/common/ProjectBackground';
 import { Record, Hashtag, Book1 } from 'iconsax-reactjs';
 import AboutPage from './about';
 import StoryPage from './story';
@@ -187,54 +188,7 @@ export default function HomePage()
                         </div>
                     </section>
                     {/* this is read node */}
-                    <section className='read-node'>
-                        <div className='rn-head'>
-                            <div className='rnh-box'>
-                                <h2>Start up with background Project Experience.</h2>
-                            </div>
-                        </div>
-                        <div className='rn-con'>
-                            <ul className='df-c'>
-                                <li className='df-c'>
-                                    <blockquote>
-                                        <p>Student Management System</p>
-                                    </blockquote>
-                                </li>
-                                <li className='df-c'>
-                                    <blockquote>
-                                        <p>Static Website Project</p>
-                                    </blockquote>
-                                </li>
-                                <li className='df-c'>
-                                    <blockquote>
-                                        <p>E-Library Management System</p>
-                                    </blockquote>
-                                </li>
-                                <li className='df-c'>
-                                    <blockquote>
-                                        <p>Pagoda Management System</p>
-                                    </blockquote>
-                                </li>
-                                <li className='df-c'>
-                                    <blockquote>
-                                        <p>E-Portfolio Website</p>
-                                    </blockquote>
-                                </li>
-                            </ul>
-                            <ul className='df-c'>
-                                <li className='df-c'>
-                                    <blockquote>
-                                        <p>Pagoda Management System</p>
-                                    </blockquote>
-                                </li>
-                                <li className='df-c'>
-                                    <blockquote>
-                                        <p>E-commerce Website</p>
-                                    </blockquote>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
+                    <ProjectBackground />
                     {/* this is about page  */}
                     <AboutPage/>  
                     {/* this is show my story  */}

@@ -1,0 +1,92 @@
+/* Base container */
+.rn-con {
+  width: 100%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+  padding: 20px 0;
+  background-color: transparent; 
+  overflow: hidden;
+  position: relative;
+}
+.rn-con::before,
+.rn-con::after{
+    position: absolute;
+    content: '';
+    width: 35%;
+    height: 100%;
+    left: -3rem;
+    bottom: -1rem;
+    background: linear-gradient(90deg, var(--sg-bglight) 35%, transparent);
+    z-index: 1;
+}
+.rn-con::after{
+    left: auto;
+    right: -5rem;
+    background: linear-gradient(-90deg, var(--sg-bglight) 35%, transparent);
+}
+.rncon-track {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+}
+
+.rncon-cn {
+  display: flex;
+  white-space: nowrap;
+  animation: scrollLeftToRight 25s linear infinite;
+}
+.rn-con .rncon-track:last-child .rncon-cn{
+    animation: scrollLeftToLeft 25s linear infinite;
+}
+.rncon-cn ul.df-c {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Layout for individual items */
+.rncon-cn ul li.df-c {
+  padding: 0 20px;
+}
+
+.rn-con blockquote {
+    margin: 0.5rem auto;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: rgb(82 82 91 / 100);
+    background: var(--sg-bglight);
+    border-radius: 50rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+/* KEYFRAMES: Left to Right Loop
+  Starts shifted left by exactly half the container width (-50%)
+  and glides smoothly to the right edge (0%)
+*/
+@keyframes scrollLeftToRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes scrollLeftToLeft {
+    0% {
+        transform: translateX(50%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.rncon-cn:hover .rncon-cn {
+  animation-play-state: paused;
+}

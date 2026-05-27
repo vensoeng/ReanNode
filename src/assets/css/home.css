@@ -150,7 +150,7 @@
     margin-right: 0.2rem;
 }
 /* -----------read node---------------- */
-.read-node{
+/* .read-node{
     width: 100%;
     max-width: 1000px;
     margin: 4rem auto;
@@ -183,4 +183,20 @@
     font-size: 0.9rem;
     font-weight: 800;
      color: rgb(82 82 91 / 100);
+} */
+
+@media screen and (max-width: 600px) {
+    .mb-box > .head{
+        margin: 0rem 0.8rem;
+        margin-top: 130px;
+    }
+    .mb-box > .head blockquote h2{
+        font-size: 1.85rem;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .mb-box > .head blockquote h2{
+        font-size: 1.5rem;
+    }
 }
