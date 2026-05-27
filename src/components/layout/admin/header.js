@@ -6,7 +6,7 @@ import Button from '../../../components/common/button';
 import { NavLink , useLocation } from 'react-router-dom';
 import { getAuthUser } from '../../../utils/auth';
 import { HamburgerMenu, Magicpen, HomeHashtag, VideoOctagon, Designtools, Gift, Dropbox} from 'iconsax-reactjs';
-export const API_URL = process.env.API_URL || 'http://localhost:5000';
+export const API_URL = process.env.API_URL || 'https://vensoengapi.vercel.app';
 export const STORAGE = process.env.STORAGE || "/images/storage/";
 
 export default function AdminHeader() {
