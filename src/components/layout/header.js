@@ -28,10 +28,10 @@ export default function Header()
         <Pageon />
         <header className="webhead">
             <div className="wh-box df-s scroll-x">
-                <div className="logo icon icon-ra icon-sm">
+                <NavLink to="/" className="logo icon icon-ra icon-sm">
                     {/* <h1>តោះ</h1> */}
                     <img className='img-c' src={favIcon} alt=''/>
-                </div>
+                </NavLink>
                 {/* rander list of route  */}
                 <ListRoute />
                 {/* this is main button */}
