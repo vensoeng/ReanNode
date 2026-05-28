@@ -190,13 +190,15 @@
         margin: 0rem 0.8rem;
         margin-top: 130px;
     }
-    .mb-box > .head blockquote h2{
+    .mb-box > .head blockquote h2,
+    .about .rt-box > h2{
         font-size: 1.85rem;
     }
 }
 
 @media screen and (max-width: 530px) {
-    .mb-box > .head blockquote h2{
+    .mb-box > .head blockquote h2,
+    .about .rt-box > h2{
         font-size: 1.5rem;
     }
 }

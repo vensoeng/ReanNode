@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { api } from '../../utils/auth';
 import { Image, DirectNotification, Magicpen, CloseCircle} from 'iconsax-reactjs';
 import '../../assets/css/admin/form.css';
+import WebLoader from './WebLoader';
 
 export default function CreateBlog({ onClose, editData = null }) {
   const [title, setTitle] = useState('');
@@ -18,6 +19,9 @@ export default function CreateBlog({ onClose, editData = null }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const isEditMode = Boolean(editData);
+
+  const [Loading, setLoading] = useState(false);
+  const [LoadingText, setLoadingText] = useState('');
 
   useEffect(() => {
     if (isEditMode && editData) {
@@ -58,6 +62,13 @@ export default function CreateBlog({ onClose, editData = null }) {
 
     setIsSubmitting(true);
 
+    if (isEditMode) {
+      setLoadingText("កំពុងរក្សាទុកការកែប្រែអត្ថបទ... សូមរង់ចាំបន្តិច");
+    } else {
+      setLoadingText("កំពុងបង្កើត និងបោះពុម្ពអត្ថបទថ្មី... សូមរង់ចាំបន្តិច");
+    }
+    setLoading(true);
+
     const formData = new FormData();
     formData.append('title', title);
     formData.append('des', des);
@@ -91,7 +102,10 @@ export default function CreateBlog({ onClose, editData = null }) {
   };
 
   return (
-    <div className="admin-form-container">
+    <div className="admin-form-container p-r">
+      {Loading && (
+        <WebLoader>{LoadingText}</WebLoader>
+      )}
       {/* Form Header */}
       <div className="form-header df-s">
         {/* 💡 ប្តូរចំណងជើងរស់រវើកតាមលក្ខខណ្ឌជាក់ស្តែង */}

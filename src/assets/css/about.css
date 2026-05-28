@@ -212,3 +212,14 @@
         height: 70px;
     }
 }
+@media screen and (max-width: 600px) {
+    .about .rt-box > h2{
+        font-size: 1.85rem;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .about .rt-box > h2{
+        font-size: 1.5rem;
+    }
+}

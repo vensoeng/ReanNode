@@ -6,7 +6,7 @@
   margin-top: 4rem;
   display: flex;
   flex-direction: column;
-  gap: 20px; 
+  gap: 0.5rem; 
   padding: 20px 0;
   background-color: transparent; 
   overflow: hidden;
@@ -52,7 +52,7 @@
 
 /* Layout for individual items */
 .rncon-cn ul li.df-c {
-  padding: 0 20px;
+  padding: 0rem 0.2rem;
 }
 
 .rn-con blockquote {

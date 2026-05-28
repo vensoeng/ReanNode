@@ -195,3 +195,21 @@
         margin: 0rem 1rem;
     }
 }
+@media screen and (max-width: 670px) {
+    .my-story-body .box ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+    }
+}
+@media screen and (max-width: 600px) {
+    .me-story .msh-box h2{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .me-story .msh-box h2{
+        font-size: 1.8rem;
+    }
+}
