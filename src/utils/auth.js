@@ -1,9 +1,10 @@
 import axios from 'axios';
-export const API_URL = process.env.API_URL || 'https://vensoengapi.vercel.app';
+// export const API_URL = process.env.VITE_API_URL || 'http://localhost:5000';
+export const API_URL =  process.env.VITE_API_URL || 'https://vensoengapi.vercel.app/';
 export const ACCESS_TOKEN_KEY = "accessToken";
 export const REFRESH_TOKEN_KEY = "refreshToken";
 export const USER_KEY = "authUser";
-export const STORAGE = process.env.API_URL || '/images/storage/';
+export const STORAGE = process.env.VITE_STORAGE || '/images/storage/';
 
 export const getAccessToken = () => localStorage.getItem(ACCESS_TOKEN_KEY);
 export const getRefreshToken = () => localStorage.getItem(REFRESH_TOKEN_KEY);

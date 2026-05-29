@@ -1,4 +1,3 @@
-
 .me-story{
     position: relative;
     z-index: 100000;
@@ -8,6 +7,14 @@
     padding-bottom: 4rem;
     overflow: hidden;
 }
+.web-main-active .me-story{
+    margin-top: 0rem;
+    z-index: 10;
+}
+/* body:has(.web-main-active) .webhead{
+    top: auto;
+    bottom: 10px;
+} */
 .me-story::before{
     position: absolute;
     content: '';
@@ -36,14 +43,17 @@
     margin: 0 auto;
     text-align: center;
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.2;
     color: var(--sg-bglight);
+}
+body:has(.web-main-active) .me-story .msh-box{
+    padding-top: 7rem;
 }
 .me-story .msh-box h2{
     font-size: 2rem;
     font-weight: 600;
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
 }
 .story-main-btn{
     margin-top: 1rem;
@@ -52,14 +62,18 @@
     z-index: 5;
 }
 .story-main-btn .btn{
+    margin: 1.5rem auto;
     color: var(--sg-button-blue);
     border-radius: 50rem;
-    padding: 0rem 1rem;
+    width: 200px;
     height: 2.8rem;
+    gap: 0.5rem;
     background: transparent;
     backdrop-filter: blur(100px);
     background: #ffffffde;
+    cursor: pointer;
 }
+
 .my-story-body{
     max-width: 1250px;
     margin: 0 auto;
@@ -89,9 +103,21 @@
     height: auto;
     position: relative;
 }
+.my-story-body .box ul li .txtTop-story{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: var(--sg-bglight);
+    background: rgba(0, 0, 0, 0.349);
+    z-index: 8;
+    border-radius: 50rem;
+    padding: 0rem 1rem;
+}
 .my-story-body .box ul li .image{
     border-radius: 16px;
     height: 500px;
+    display: block;
+    position: relative;
 }
 .my-story-body .box ul li .image::after{
     width: 100%;
@@ -126,11 +152,16 @@
     position: relative;
     z-index: 5;
 }
+.my-story-body .box ul li .text-main{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
 .my-story-body .box ul li .text h2,
 .web-contact-body .content h2{
     position: relative;
     font-family: var(--sg-fontKous);
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 800;
     color: var(--sg-main-color-yellow);
     display: -webkit-box;
@@ -138,17 +169,24 @@
     -webkit-line-clamp: 1;
     overflow: hidden;
 }
+.my-story-body .box ul li .text-main blockquote p{
+    line-height: 1.3;
+    font-size: 1rem;
+    color: var(--sg-bglight);
+}
 .my-story-body .box ul li > .text span,
 .web-contact-body .content > .text span{
     display: block;
-    width: 3rem;
+    width: 1.8rem;
     min-width: 1rem;
     height: 0.2rem;
     margin-left: 1rem;
     background: var(--sg-bglight);
     margin-top: -8px;
 }
-
+.my-story-body .box ul li .detail {
+    margin-top: 1rem;
+}
 .my-story-body .box ul li .list,
 .web-contact-body .content > .detail .list{
     display: flex;
@@ -165,6 +203,22 @@
     font-family: var(--sg-fontbrand);
     color: var(--sg-border-mainApp);
     opacity: 0.9;
+}
+.my-story-body .box ul li .list .btn{
+    color: var(--sg-bglight);
+    border-radius: 50rem;
+    margin-right: 0.3rem;
+    background: transparent;
+    cursor: pointer;
+    transition: all ease-in-out 0.2s;
+}.my-story-body .box ul li .list .btn:hover{
+    background: rgba(255, 255, 255, 0.123);
+}.my-story-body .box ul li .list .btn:active{
+    scale: 0.85;
+    background: rgba(255, 255, 255, 0.123);
+}
+.my-story-body .box ul li .list .btn p::first-letter{
+    text-transform: uppercase;
 }
 .my-story-body .box ul li .list a,
 .web-contact-body .content > .detail .list a{

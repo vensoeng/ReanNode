@@ -1,11 +1,42 @@
+import { useEffect, useState } from 'react';
+import { API_URL } from '../utils/auth';
+
+import WebLoader from '../components/common/WebLoader';
+
 import '../assets/css/story.css';
-import testImgStory from '../assets/img/test_story_img.jpg';
 import Button from '../components/common/button';
+import StoryCard from '../components/common/StoryCard';
 import StarryBackground from '../components/common/StarryBackground';
-export default function StoryPage()
+import {ArrowRight} from 'iconsax-reactjs';
+
+export default function StoryPage({active = true})
 {
+    const [blogs, setBlogs] = useState([]);
+    const [loading, setLoading] = useState(true);
+    
+    useEffect(() => {
+        const fetchBlogs = async () => {
+            try {
+                const res = await fetch(
+                    `${API_URL}/blogs`
+                );
+                const data = await res.json();
+                setBlogs(data);
+            } catch (err) {
+                console.error(
+                    "Error fetching blogs:",
+                    err
+                );
+            } finally {
+                setLoading(false);
+            }
+
+        };
+        fetchBlogs();
+    }, []);
+
     return (
-        <main className="web-main">
+        <main  className={active ? "web-main web-main-active" : "web-main"}>
             <div className="main-body">
                 <div className="mb-box">
                     <section className="me-story">
@@ -13,159 +44,61 @@ export default function StoryPage()
                         <div className="ms-box">
                             <div className="ms-head">
                                 <div className="msh-box">
-                                    <h2>ពីក្រោយនៃស្នាមញញឹមនេះ មានរឿងរ៉ាវជាច្រើនដែលខ្ញុំបានឆ្លងកាត់!</h2>
+                                    <h2>ព្រឹត្តិការណ៍</h2>
                                     <blockquote>
-                                        <p>ធ្វើជាហេតុផលដែលនរណាម្នាក់ញញឹមនៅថ្ងៃនេះ... ឬយ៉ាងហោចណាស់ហេតុផលដែលពួកគេសើចនៅពេលពួកគេគិតពីអ្នកនៅពេលក្រោយ㋡</p>
+                                        <p>ស្វែងរក និងអានព្រឹត្តិការណ៍ផ្សេងៗដែលមានការបង្កើតជាប្រចាំ!</p>
                                     </blockquote>
                                 </div>
-                            </div>
-                            <div className='story-main-btn df-c'>
-                                <Button>
-                                    មើលបន្ថែមច្រើនទៀត
-                                </Button>
                             </div>
                             <div className="ms-con">
                                 <div className="msc-box">
                                     <div className="my-story-body">
                                         <div className='box'>
                                             <ul>
-                                                <li
-                                                    style={{ "--bg-img": `url(${testImgStory})` }}
-                                                    >
-                                                    <div className="image">
-                                                        <img className="img-c" src={testImgStory} alt="" />
-                                                    </div>
-                                                    <div className="text">
-                                                        <div className="title df-l">
-                                                            <h2>ក្នុងនាមជាបងគេ</h2>
-                                                            <span></span>
-                                                        </div>
-                                                    </div>
-                                                    <div className="detail">
-                                                        <div className="list df-l">
-                                                            <strong>Main:</strong>
-                                                            <div className="text df-l">
-                                                                <span><p>be</p></span><span ><p>brother</p></span><span ><p></p></span><span ><p></p></span>                                    </div>
-                                                        </div>
-                                                        <div className="list df-l">
-                                                            <strong>Hastag:</strong>
-                                                            <div className="text df-l">
-                                                                <span ><p>brother</p></span><span><p>family</p></span><span ><p></p></span>                                    </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                 <li
-                                                    style={{ "--bg-img": "url('https://vensoeng.free.nf/upload/683a9481b1673.jpg')" }}
-                                                    data-aos="zoom-in"
-                                                    className="aos-init aos-animate"
-                                                    >
-                                                    <div className="image">
-                                                        <img className="img-c" loading="lazy" src={testImgStory} alt="" />
-                                                    </div>
-                                                    <div className="text">
-                                                        <div className="title df-l">
-                                                            <h2>ក្នុងនាមជាបងគេ</h2>
-                                                            <span></span>
-                                                        </div>
-                                                    </div>
-                                                    <div className="detail">
-                                                        <div className="list df-l">
-                                                            <strong>Main:</strong>
-                                                            <div className="text df-l">
-                                                                <span><p>be</p></span><span ><p>brother</p></span><span ><p></p></span><span ><p></p></span>                                    </div>
-                                                        </div>
-                                                        <div className="list df-l">
-                                                            <strong>Hastag:</strong>
-                                                            <div className="text df-l">
-                                                                <span ><p>brother</p></span><span><p>family</p></span><span ><p></p></span>                                    </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li
-                                                    style={{ "--bg-img": "url('https://vensoeng.free.nf/upload/683a9481b1673.jpg')" }}
-                                                    data-aos="zoom-in"
-                                                    className="aos-init aos-animate"
-                                                    >
-                                                    <div className="image">
-                                                        <img className="img-c" loading="lazy" src={testImgStory} alt="" />
-                                                    </div>
-                                                    <div className="text">
-                                                        <div className="title df-l">
-                                                            <h2>ក្នុងនាមជាបងគេ</h2>
-                                                            <span></span>
-                                                        </div>
-                                                    </div>
-                                                    <div className="detail">
-                                                        <div className="list df-l">
-                                                            <strong>Main:</strong>
-                                                            <div className="text df-l">
-                                                                <span><p>be</p></span><span ><p>brother</p></span><span ><p></p></span><span ><p></p></span>                                    </div>
-                                                        </div>
-                                                        <div className="list df-l">
-                                                            <strong>Hastag:</strong>
-                                                            <div className="text df-l">
-                                                                <span ><p>brother</p></span><span><p>family</p></span><span ><p></p></span>                                    </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                 <li
-                                                    style={{ "--bg-img": "url('https://vensoeng.free.nf/upload/683a9481b1673.jpg')" }}
-                                                    data-aos="zoom-in"
-                                                    className="aos-init aos-animate"
-                                                    >
-                                                    <div className="image">
-                                                        <img className="img-c" loading="lazy" src={testImgStory} alt="" />
-                                                    </div>
-                                                    <div className="text">
-                                                        <div className="title df-l">
-                                                            <h2>ក្នុងនាមជាបងគេ</h2>
-                                                            <span></span>
-                                                        </div>
-                                                    </div>
-                                                    <div className="detail">
-                                                        <div className="list df-l">
-                                                            <strong>Main:</strong>
-                                                            <div className="text df-l">
-                                                                <span><p>be</p></span><span ><p>brother</p></span><span ><p></p></span><span ><p></p></span>                                    </div>
-                                                        </div>
-                                                        <div className="list df-l">
-                                                            <strong>Hastag:</strong>
-                                                            <div className="text df-l">
-                                                                <span ><p>brother</p></span><span><p>family</p></span><span ><p></p></span>                                    </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                 <li
-                                                    style={{ "--bg-img": "url('https://vensoeng.free.nf/upload/683a9481b1673.jpg')" }}
-                                                    data-aos="zoom-in"
-                                                    className="aos-init aos-animate"
-                                                    >
-                                                    <div className="image">
-                                                        <img className="img-c" loading="lazy" src={testImgStory} alt="" />
-                                                    </div>
-                                                    <div className="text">
-                                                        <div className="title df-l">
-                                                            <h2>ក្នុងនាមជាបងគេ</h2>
-                                                            <span></span>
-                                                        </div>
-                                                    </div>
-                                                    <div className="detail">
-                                                        <div className="list df-l">
-                                                            <strong>Main:</strong>
-                                                            <div className="text df-l">
-                                                                <span><p>be</p></span><span ><p>brother</p></span><span ><p></p></span><span ><p></p></span>                                    </div>
-                                                        </div>
-                                                        <div className="list df-l">
-                                                            <strong>Hastag:</strong>
-                                                            <div className="text df-l">
-                                                                <span ><p>brother</p></span><span><p>family</p></span><span ><p></p></span>                                    </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
+                                                {
+                                                    loading ? (
+
+                                                        <WebLoader>
+                                                            រង់ចាំបន្ដិចយើងកំពុងទាញយកទិន្នន័យដើម្បីដំណើរការ
+                                                        </WebLoader>
+
+                                                    ) : blogs.length === 0 ? (
+
+                                                        <li
+                                                            style={{
+                                                                textAlign: 'center',
+                                                                padding: '30px',
+                                                                color: '#64748b'
+                                                            }}
+                                                        >
+                                                            មិនមានទិន្នន័យអត្ថបទឡើយ។
+                                                        </li>
+
+                                                    ) : (
+
+                                                        blogs
+                                                            .toReversed()
+                                                            .map((blog, index) => (
+
+                                                                <StoryCard
+                                                                    key={index}
+                                                                    blog={blog}
+                                                                />
+
+                                                            ))
+
+                                                    )
+                                                }
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div className='story-main-btn df-c'>
+                                <Button>
+                                    មើលបន្ថែមទៀត 
+                                    <ArrowRight />
+                                </Button>
                             </div>
                         </div>
                         <StarryBackground />

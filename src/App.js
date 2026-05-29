@@ -11,6 +11,8 @@ import CreatorPage from './pages/creator';
 import EducationPage from './pages/education';
 import PosterPage from './pages/poster';
 import WebsitePage from './pages/website';
+import Story from './pages/story';
+import StoryDetail from './pages/storyDetail';
 import './App.css';
 import RequireAuth from './components/route/RequireAuth';
 // admin layout 
@@ -50,6 +52,8 @@ function RoutePage() {
         <Route path='/creator' element={<CreatorPage />} />
         <Route path='/education' element={<EducationPage />} />
         <Route path='/poster' element={<PosterPage />} />
+        <Route path='/storys' element={<Story />} />
+        <Route path="/storys/detail/:id" element={<StoryDetail />} />
         <Route path='/website' element={<WebsitePage />} />
       </Route>
       {/* register */}

@@ -1,12 +1,14 @@
 .pageon .box{
     position: fixed;
-    top: calc(100% - 3rem);
+    top: 10%;
     transform: translate(-50%, -50%);
-    left: 50%;
+    left: calc(100% - 6rem);
     background: var(--sg-maincolor-orangdark);
     color: var(--bgcolor-Light);
     z-index: 100000000;
     border-radius: 10px 10px 0px 0px;
+    rotate: 270deg;
+    width: max-content;
 }
 /* .pageon::before{
     width: 100%;
@@ -20,7 +22,8 @@
 } */
 
 .pageon .box h2{
-    padding: 2rem;
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
     display: block;
     text-align: center;
 }

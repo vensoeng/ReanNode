@@ -15,8 +15,8 @@
     gap: 0.8rem;
 }
 .wh-box .logo{
-    width: 3rem;
-    height: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 50rem;
     object-fit: cover;
     /* background: var(--sg-color-brand); */
