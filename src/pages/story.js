@@ -76,16 +76,13 @@ export default function StoryPage({active = true})
 
                                                     ) : (
 
-                                                        blogs
-                                                            .toReversed()
-                                                            .map((blog, index) => (
-
-                                                                <StoryCard
-                                                                    key={index}
-                                                                    blog={blog}
-                                                                />
-
-                                                            ))
+                                                        [...blogs].reverse().map((blog, index) => (
+                                                            <StoryCard
+                                                                key={index}
+                                                                blog={blog}
+                                                                newStory={true}
+                                                            />
+                                                        ))
 
                                                     )
                                                 }
