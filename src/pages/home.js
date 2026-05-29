@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-// import { API_URL } from '../utils/auth';
+import { API_URL } from '../utils/auth';
 
 import WebLoader from '../components/common/WebLoader';
 
@@ -24,10 +24,9 @@ export default function HomePage()
     
     useEffect(() => {
         const fetchBlogs = async () => {
-            console.log(`${API_URL}/blogs?limit=5`);
             try {
                 const res = await fetch(
-                    `${API_URL}/blogs?limit=5`
+                    `https://vensoengapi.vercel.app/blogs?limit=5`
                 );
                 const data = await res.json();
                 setBlogs(data);
