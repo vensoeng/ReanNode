@@ -230,7 +230,7 @@ export default function HomePage()
                     {/* this is about page  */}
                     <AboutPage/>  
                     {/* this is show my story  */}
-                    <main className="web-main">
+                    <section className="web-main">
                         <div className="main-body">
                             <div className="mb-box">
                                 <section className="me-story">
@@ -270,17 +270,13 @@ export default function HomePage()
 
                                                                 ) : (
 
-                                                                    blogs
-                                                                        .toReversed()
-                                                                        .map((blog, index) => (
-
-                                                                            <StoryCard
-                                                                                key={index}
-                                                                                blog={blog}
-                                                                                newStory={true}
-                                                                            />
-
-                                                                        ))
+                                                                    [...blogs].reverse().map((blog, index) => (
+                                                                        <StoryCard
+                                                                            key={index}
+                                                                            blog={blog}
+                                                                            newStory={true}
+                                                                        />
+                                                                    ))
 
                                                                 )
                                                             }
@@ -300,7 +296,7 @@ export default function HomePage()
                                 </section>
                             </div>
                         </div>
-                    </main>
+                    </section>
 
                 </div>
             </div>
