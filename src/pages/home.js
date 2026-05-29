@@ -10,6 +10,7 @@ import ProjectBackground from '../components/common/ProjectBackground';
 import AlienBackground from '../components/common/AlienBackground';
 import StoryCard from '../components/common/StoryCard';
 import StarryBackground from '../components/common/StarryBackground';
+import AdvertisementPopup from '../components/common/AdvertisementPopup';
 
 import { Record, Hashtag, Book1, ArrowRight } from 'iconsax-reactjs';
 //webpage add on
@@ -46,6 +47,7 @@ export default function HomePage()
     return(
         <main className="web-main">
             <AlienBackground />
+            <AdvertisementPopup />
             <div className="main-body">
                 <div className="mb-box">
                     {/* this is is head of home page  */}
@@ -297,7 +299,6 @@ export default function HomePage()
                             </div>
                         </div>
                     </section>
-
                 </div>
             </div>
         </main>

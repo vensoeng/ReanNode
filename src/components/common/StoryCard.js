@@ -4,13 +4,28 @@ import { API_URL, STORAGE } from '../../utils/auth';
 import { NavLink } from 'react-router-dom';
 
 export default function StoryPage({blog = {} , index = 0, newStory = false}) {
+    const [imgLoaded, setImgLoaded] = useState(false);
+    const imageUrl = API_URL + STORAGE + blog.img;
+
     return (
         <li style={{ "--bg-img": `url(${API_URL + STORAGE + blog.img})` }}>
 
             {newStory ? <div className="txtTop-story btn">ថ្មីៗនេះ</div> : ''}
             
             <NavLink to={`/storys/detail/${blog.id}`} className="image">
-                <img className="img-c" src={API_URL + STORAGE + blog.img} alt="" />
+                {!imgLoaded && (
+                        <div className="img-loader-placeholder">
+                            <div className="spinner"></div>
+                            <span style={{ fontSize: '12px', color: '#64748b', marginTop: '8px' }}>កំពុងផ្ទុក...</span>
+                        </div>
+                )}
+                <img 
+                    className={`img-c ${imgLoaded ? 'loaded' : 'loading'}`} 
+                    src={imageUrl} 
+                    alt={blog.title || "Story Image"} 
+                    loading="lazy"
+                    onLoad={() => setImgLoaded(true)}
+                />
             </NavLink>
             <NavLink to={`/storys/detail/${blog.id}`} className="text text-main">
                 <div className="title df-s">
