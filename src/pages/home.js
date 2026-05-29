@@ -26,7 +26,7 @@ export default function HomePage()
         const fetchBlogs = async () => {
             try {
                 const res = await fetch(
-                    `https://vensoengapi.vercel.app/blogs?limit=5`
+                    `${API_URL}/blogs?limit=5`
                 );
                 const data = await res.json();
                 setBlogs(data);
@@ -38,9 +38,9 @@ export default function HomePage()
             } finally {
                 setLoading(false);
             }
-
         };
         fetchBlogs();
+        
     }, []);
 
     return(

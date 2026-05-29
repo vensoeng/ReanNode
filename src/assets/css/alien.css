@@ -6,7 +6,8 @@ FILE: src/components/common/alien-background.css
     position: fixed;
     inset: 0;
     overflow: hidden;
-    z-index: -10;
+    overflow: visible;
+    z-index: -100;
 }
 
 /* ==========================================
