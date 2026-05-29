@@ -80,7 +80,6 @@ export default function StoryPage({active = true})
                                                             <StoryCard
                                                                 key={index}
                                                                 blog={blog}
-                                                                newStory={true}
                                                             />
                                                         ))
 
