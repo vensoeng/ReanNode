@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { API_URL } from '../utils/auth';
+// import { API_URL } from '../utils/auth';
 
 import WebLoader from '../components/common/WebLoader';
 
