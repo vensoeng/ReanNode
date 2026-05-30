@@ -1,7 +1,7 @@
 // api/story.js
 import fs from 'fs';
 import path from 'path';
-import { API_URL, STORAGE } from '../utils/auth';
+import { API_URL, STORAGE } from '../src/utils/auth';
 
 export default async function handler(req, res) {
   const { id } = req.query;
