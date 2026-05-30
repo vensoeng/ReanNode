@@ -1,6 +1,4 @@
 // api/story.js
-import fs from 'fs';
-import path from 'path';
 import { API_URL, STORAGE } from '../utils/auth';
 
 export default async function handler(req, res) {
@@ -49,16 +47,28 @@ export default async function handler(req, res) {
       return res.status(200).send(html);
     }
 
-    const indexPath = path.join(process.cwd(), 'index.html');
-    
-    if (fs.existsSync(indexPath)) {
-      const reactHtml = fs.readFileSync(indexPath, 'utf8');
-      res.setHeader('Content-Type', 'text/html');
-      return res.status(200).send(reactHtml);
-    }
+    // ----------------------------------------------------
+    // ករណីទី២៖ បើជា មនុស្សធម្មតា (Bypass ឱ្យទៅកាន់ React ផ្ទាល់)
+    // ----------------------------------------------------
+    // បង្កើតកូដ HTML ឆៅមួយដើម្បីដាស់ឱ្យ React App (Vite) របស់អ្នកដំណើរការខ្លួនឯងនៅលើ Browser
+    const reactAppHtml = `
+      <!DOCTYPE html>
+      <html lang="km">
+        <head>
+          <meta charset="UTF-8" />
+          <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Vensoeng</title>
+        </head>
+        <body>
+          <div id="root"></div>
+          <script type="module" src="/src/main.jsx"></script>
+        </body>
+      </html>
+    `;
 
     res.setHeader('Content-Type', 'text/html');
-    return res.status(200).send('<!DOCTYPE html><html><head></head><body><div id="root"></div><script type="module" src="/src/main.jsx"></script></body></html>');
+    return res.status(200).send(reactAppHtml);
 
   } catch (err) {
     console.error("Error inside serverless function:", err);
