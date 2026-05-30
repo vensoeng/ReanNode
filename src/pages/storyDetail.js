@@ -42,11 +42,7 @@ export default function StoryDetail() {
             fetchSingleBlog();
         }
     }, [id]);
-     
-    // check privait blog 
-    if(!blog && Number(blog.status) !== 1 ){
-        return <NotFoundPage></NotFoundPage>;
-    }
+
     return (
         <div className="styde styde-light">
             {/* this Is header  */}
@@ -77,9 +73,10 @@ export default function StoryDetail() {
                 {loading && <WebLoader>យើងកំពុងធ្វើការទាញយកទិន្នន័យ..</WebLoader>}
 
                 {!loading && (!blog || Number(blog.status) !== 1) ? (
-                    <p style={{ padding: '20px', textAlign: 'center' }}>
-                        រកមិនឃើញទិន្នន័យ ឬអត្ថបទនេះត្រូវបានដាក់ឯកជនជន (Private)!
-                    </p>
+                    // <p style={{ padding: '20px', textAlign: 'center' }}>
+                    //     រកមិនឃើញទិន្នន័យ ឬអត្ថបទនេះត្រូវបានដាក់ឯកជនជន!
+                    // </p>
+                    <NotFoundPage></NotFoundPage>
                 ) : (
                     blog && (
                         <div className="story-content">
