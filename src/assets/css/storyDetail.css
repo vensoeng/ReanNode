@@ -1,18 +1,108 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 body:has(.styde) .webhead,
 body:has(.styde) .web-footer{
     display: none;
 }
+body:has(.styde-light){
+    --sg-txt-color:  rgb(0, 0, 0);
+    --sg-bg-color: #fff;
+    --sg-bg-70: rgb(250,250,250);
+    --sg-bg-50: #e0e9fb0f;
+    --sg-head-bg: #fff;
+    --sg-head-border: #e0e9fb;
+    --sg-headcon-border: #e0e9fb;
+    --sg-form-font: "Google Sans", sans-serif;
+}
+/* ------------- */ body:has(.styde-light) p{
+    color: var(--sg-txt-color) !important;
+}
+.styde-dark{
+
+}
+
 .styde{
     min-height: 100vh;
     position: relative;
-    background: var(--colorText-00);
+    background: var(--sg-bg-color);
+}
+.styde-head{
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid var(--sg-head-border);
+    background: var(--sg-head-bg);
+    z-index: 100;
+}
+.styde-head .stydh-box{
+    height: 60px;
+    max-width: 900px;
+    margin: 0rem auto;
+}
+.styde-head .row{
+    gap: 0.5rem;
+}
+.styde-head .ibtn{
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50rem;
+    background: var(--sg-bglight);
+    min-width: max-content;
+}
+.styde-head .ibtn{
+
+}
+.styde-head .btn-home{
+    border-radius: 50rem;
+    cursor: pointer;
+    background: transparent;
+}
+.styde-head h2{
+    font-family: var(--sg-form-font);
+    font-size: 1.25rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
 }
 .stydebox{
-    padding: 3.5rem 0rem;
     max-width: 900px;
     margin: 0 auto;
     box-sizing: border-box;
-    border: 1px solid var(--colorBorder-00);
+    /* border: 1px solid var(--colorBorder-00); */
     border-top: none;
     border-bottom: none;
+}
+
+.stydeconhead .styd-img{
+    max-height: 350px;
+    /* min-height: 250px; */
+    overflow: visible;
+    overflow: hidden;
+}
+.stydeconhead .styd-info {
+    margin: 1rem;
+    margin-bottom: 0rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--sg-headcon-border) ;
+}
+.stydeconhead .styd-info .stydinbox{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.stydeconhead .styd-info h2{
+    font-size: 1.5rem;
+    font-family: var(--sg-form-font);
+}
+.stydeconhead .styd-info blockquote{
+    font-size: 1.08rem;
+    font-style: italic;
+    font-family: var(--sg-form-font);
+}
+
+@media screen and (max-width: 670px) {
+    .stydeconhead .styd-img{
+        max-height: 250px;
+    }
 }

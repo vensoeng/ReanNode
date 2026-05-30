@@ -6,7 +6,7 @@ import WebLoader from '../components/common/WebLoader';
 
 import '../assets/css/story.css';
 import '../assets/css/home.css';
-import Button from '../components/common/button';
+// import Button from '../components/common/button';
 import ProjectBackground from '../components/common/ProjectBackground';
 import AlienBackground from '../components/common/AlienBackground';
 import StoryCard from '../components/common/StoryCard';
@@ -46,16 +46,16 @@ export default function HomePage() {
                                 បង្កើតដំណោះស្រាយប្រកបដោយភាពច្នៃប្រឌិត និងមានប្រសិទ្ធភាព
                                 គេហទំព័រនិងទូរស័ព្ទ។
                             </h2>
-                            <p>សួស្តី ខ្ញុំឈ្មោះវិនសឹង្ហ ហើយខ្ញុំជាអ្នកអភិវឌ្ឍន៍ជាមួយនឹងបទពិសោធន៍ក្នុងភាសាសរសេរកម្មវិធី និងក្របខ័ណ្ឌផ្សេងៗ។</p>
+                            <p>រកសេវាកម្មល្អៗបាននៅទីនេះ! រាល់ការគាំទ្ររបស់បងៗ គឺជាកម្លាំងចិត្តឱ្យ ខ្ញុំបន្តស្វែងរកអ្វីដែលថ្មី និងឥតគិតថ្លៃមកចែករំលែកបន្តទៀត។</p>
                             <div className='list-btn'>
                                 <div className='df-c'>
-                                    <Button>ទាញយកប្រវត្តរូប</Button>
-                                    <Button>
+                                    <NavLink to='/service/' className='btn'>ស្វែងរកសេវ៉ាកម្ម</NavLink>
+                                    <NavLink to='/storys' className='btn'>
                                         <Book1 />
-                                        ទិដ្ឋពីក្រោយជីវិត
-                                    </Button>
+                                        អានអត្ថបទ
+                                    </NavLink>
                                 </div>
-                                <p>Open source platform!</p>
+                                <p>Open source platform</p>
                             </div>
                         </blockquote>
                     </section>
@@ -203,12 +203,12 @@ export default function HomePage() {
                                 <div className='skc-box df-s'>
                                     <div className='row'>
                                         <div className='row-head'>
-                                            <h2>2025 - 2026 Fut</h2>
+                                            <h2>2025 - 2026</h2>
                                         </div>
                                         <ul>
                                             <li className="df-l">
                                                 <Hashtag />
-                                                <p>React JS, Vue.js, Flutter, Network, Node Express.</p>
+                                                <p>React JS, Vue.js,Node Express.</p>
                                             </li>
                                         </ul>
                                     </div>

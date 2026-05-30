@@ -24,6 +24,9 @@ import AdminHeader from './components/layout/admin/header';
 import Dashboard from './pages/admin/dashboard';
 import AdminBlogs from './pages/admin/blogs'
 
+//Not fould webpage 
+import NotFoundPage from './pages/404';
+
 //for user queryClient
 const queryClient = new QueryClient();
 
@@ -59,9 +62,10 @@ function RoutePage() {
         <Route path='/education' element={<EducationPage />} />
         <Route path='/poster' element={<PosterPage />} />
         <Route path='/storys' element={<Story />} />
-        <Route path="/storys/detail/:id" element={<StoryDetail />} />
         <Route path='/website' element={<WebsitePage />} />
       </Route>
+      {/* user route doesn't layout  */}
+      <Route path="/storys/detail/:id" element={<StoryDetail />} />
       {/* register */}
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
@@ -70,7 +74,8 @@ function RoutePage() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/admin/blogs" element={<AdminBlogs />} />
       </Route>
-
+      {/* Not Found  */}
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
 }

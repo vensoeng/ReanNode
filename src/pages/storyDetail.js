@@ -1,11 +1,14 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
-import { API_URL } from '../utils/auth';
+import { API_URL, STORAGE } from '../utils/auth';
 
 import WebLoader from '../components/common/WebLoader';
-
+import { ArrowLeft, Moon, Link21 } from 'iconsax-reactjs';
 import '../assets/css/storyDetail.css';
 export default function StoryDetail() {
+    const navigate = useNavigate();
+
     const { id } = useParams(); 
     const [blog, setBlog] = useState(null);
     const [htmlContent, setHtmlContent] = useState('');
@@ -44,7 +47,31 @@ export default function StoryDetail() {
         return;
     }
     return (
-        <div className="styde">
+        <div className="styde styde-light">
+            {/* this Is header  */}
+            <div className='styde-head'>
+                <div className='stydh-box df-s'>
+                    <button 
+                        type='button'
+                        className='btn-home row btn ibtn'
+                        onClick={() => navigate(-1)}
+                    >
+                        <ArrowLeft />
+                    </button>
+                    <div className='row'>
+                        <h2>{blog.title}</h2>
+                    </div>
+                    <div className='row df-l'>
+                        <button className='btn ibtn'>
+                            <Moon />
+                        </button>
+                        <button className='btn ibtn'>
+                            <Link21 />
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {/* this is header of content */}
             <div className='stydebox'>
                 {loading && <WebLoader>យើងកំពុងធ្វើការទាញយកទិន្នន័យ..</WebLoader>}
 
@@ -54,7 +81,35 @@ export default function StoryDetail() {
                     </p>
                 ) : (
                     blog && (
-                        <div className="story-content" style={{ marginTop: '30px', lineHeight: '1.7' }}>
+                        <div className="story-content">
+                            {/* heade */}
+                            <div className='stydeconhead'>
+                                <div className='stydeconhead-box'>
+                                    <div className='styd-img'>
+                                        <img 
+                                            className="img-c" 
+                                            src={API_URL + STORAGE + blog.img} 
+                                            alt={blog.title || "Story image"} 
+                                            style={{ 
+                                                opacity: 1, 
+                                                transition: 'opacity 0.4s ease-in-out',
+                                                width: '100%',
+                                                height: '100%',
+                                                objectFit: 'cover'
+                                            }}
+                                        />
+                                    </div>
+                                    <div className='styd-info'>
+                                        <div className='stydinbox'>
+                                            <h2>{blog.title}</h2>
+                                            <blockquote>
+                                                <p>{blog.des}</p>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {/* content writting */}
                             {loadingHtml ? (
                                 <p style={{ color: '#94a3b8' }}>កំពុងទាញយកខ្លឹមសារអត្ថបទពីប្រព័ន្ធ...</p>
                             ) : (

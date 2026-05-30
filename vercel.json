@@ -3,6 +3,10 @@
     {
       "source": "/ngalert@0.1.0/:path*",
       "destination": "/ngalert@0.1.0/:path*"
+    },
+    {
+      "source": "/storys/detail/:id",
+      "destination": "/api/story?id=:id"
     }
   ]
 }
