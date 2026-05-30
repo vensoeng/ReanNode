@@ -1,39 +1,29 @@
-import { useEffect, useState } from 'react';
+import { useQuery } from '@tanstack/react-query';
+import { NavLink } from 'react-router-dom';
 import { API_URL } from '../utils/auth';
 
 import WebLoader from '../components/common/WebLoader';
 
 import '../assets/css/story.css';
-import Button from '../components/common/button';
 import StoryCard from '../components/common/StoryCard';
 import StarryBackground from '../components/common/StarryBackground';
 import {ArrowRight} from 'iconsax-reactjs';
 
-export default function StoryPage({active = true})
-{
-    const [blogs, setBlogs] = useState([]);
-    const [loading, setLoading] = useState(true);
-    
-    useEffect(() => {
-        const fetchBlogs = async () => {
-            try {
-                const res = await fetch(
-                    `${API_URL}/blogs`
-                );
-                const data = await res.json();
-                setBlogs(data);
-            } catch (err) {
-                console.error(
-                    "Error fetching blogs:",
-                    err
-                );
-            } finally {
-                setLoading(false);
-            }
+const fetchBlogsFromServer = async () => {
+    const res = await fetch(`${API_URL}/blogs`);
+    if (!res.ok) {
+        throw new Error('Network response was not ok');
+    }
+    return res.json();
+};
 
-        };
-        fetchBlogs();
-    }, []);
+export default function StoryPage({active = true})
+{    
+    const { data: blogs = [], isLoading } = useQuery({
+        queryKey: ['blogs', 'all'],             
+        queryFn: fetchBlogsFromServer,  
+        staleTime: 5 * 60 * 1000,     
+    });
 
     return (
         <main  className={active ? "web-main web-main-active" : "web-main"}>
@@ -56,33 +46,21 @@ export default function StoryPage({active = true})
                                         <div className='box'>
                                             <ul>
                                                 {
-                                                    loading ? (
-
+                                                    isLoading ? (
                                                         <WebLoader>
                                                             រង់ចាំបន្ដិចយើងកំពុងទាញយកទិន្នន័យដើម្បីដំណើរការ
                                                         </WebLoader>
-
                                                     ) : blogs.length === 0 ? (
-
-                                                        <li
-                                                            style={{
-                                                                textAlign: 'center',
-                                                                padding: '30px',
-                                                                color: '#64748b'
-                                                            }}
-                                                        >
+                                                        <li style={{ textAlign: 'center', padding: '30px', color: '#64748b' }}>
                                                             មិនមានទិន្នន័យអត្ថបទឡើយ។
                                                         </li>
-
                                                     ) : (
-
                                                         [...blogs].reverse().map((blog, index) => (
                                                             <StoryCard
                                                                 key={index}
                                                                 blog={blog}
                                                             />
                                                         ))
-
                                                     )
                                                 }
                                             </ul>
@@ -91,10 +69,10 @@ export default function StoryPage({active = true})
                                 </div>
                             </div>
                             <div className='story-main-btn df-c'>
-                                <Button>
-                                    មើលបន្ថែមទៀត 
+                                <NavLink to='/' className="btn">
+                                    ទៅកាន់ទំេព័រដើម
                                     <ArrowRight />
-                                </Button>
+                                </NavLink>
                             </div>
                         </div>
                         <StarryBackground />

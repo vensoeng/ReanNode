@@ -10,6 +10,7 @@
 .web-main-active .me-story{
     margin-top: 0rem;
     z-index: 10;
+    min-height: 100vh;
 }
 /* body:has(.web-main-active) .webhead{
     top: auto;
@@ -282,7 +283,8 @@ body:has(.web-main-active) .me-story .msh-box{
 .my-story-body .box ul li .image .img-c {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* 📌 Downscales and crops neatly without losing proportions */
+    object-fit: cover;
+    aspect-ratio: 9 / 16;
     transition: opacity 0.4s ease-in-out;
 }
 

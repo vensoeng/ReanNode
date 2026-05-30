@@ -1,4 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Outlet} from 'react-router-dom';
+//inport from @tanstack/react-query installed 
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
 // webpage layout 
 import Header from "./components/layout/header";
 import Footer from './components/layout/footer';
@@ -20,6 +23,9 @@ import AdminHeader from './components/layout/admin/header';
 // page 
 import Dashboard from './pages/admin/dashboard';
 import AdminBlogs from './pages/admin/blogs'
+
+//for user queryClient
+const queryClient = new QueryClient();
 
 function MainLayout() {
   return (
@@ -71,9 +77,11 @@ function RoutePage() {
 
 function App() {
   return (
-    <Router>
-      <RoutePage />
-    </Router>
+    <QueryClientProvider client={queryClient}>
+      <Router>
+        <RoutePage />
+      </Router>
+    </QueryClientProvider>
   );
 }
 

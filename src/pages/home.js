@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useQuery } from '@tanstack/react-query';
+import { NavLink } from 'react-router-dom';
 import { API_URL } from '../utils/auth';
 
 import WebLoader from '../components/common/WebLoader';
@@ -12,39 +13,27 @@ import StoryCard from '../components/common/StoryCard';
 import StarryBackground from '../components/common/StarryBackground';
 import AdvertisementPopup from '../components/common/AdvertisementPopup';
 
-import { Record, Hashtag, Book1, ArrowRight } from 'iconsax-reactjs';
+import { Record, Hashtag, Book1} from 'iconsax-reactjs';
 //webpage add on
 import AboutPage from './about';
 // import StoryPage from './story';
 
+const fetchBlogsFromServer = async () => {
+    const res = await fetch(`${API_URL}/blogs?limit=5`);
+    if (!res.ok) {
+        throw new Error('Network response was not ok');
+    }
+    return res.json();
+};
 
-export default function HomePage()
-{
-    const [blogs, setBlogs] = useState([]);
-    const [loading, setLoading] = useState(true);
-    
-    useEffect(() => {
-        const fetchBlogs = async () => {
-            try {
-                const res = await fetch(
-                    `${API_URL}/blogs?limit=5`
-                );
-                const data = await res.json();
-                setBlogs(data);
-            } catch (err) {
-                console.error(
-                    "Error fetching blogs:",
-                    err
-                );
-            } finally {
-                setLoading(false);
-            }
-        };
-        fetchBlogs();
-        
-    }, []);
+export default function HomePage() {
+    const { data: blogs = [], isLoading } = useQuery({
+        queryKey: ['blogs'],
+        queryFn: fetchBlogsFromServer,
+        staleTime: 5 * 60 * 1000,
+    });
 
-    return(
+    return (
         <main className="web-main">
             <AlienBackground />
             <AdvertisementPopup />
@@ -62,7 +51,7 @@ export default function HomePage()
                                 <div className='df-c'>
                                     <Button>ទាញយកប្រវត្តរូប</Button>
                                     <Button>
-                                        <Book1/>
+                                        <Book1 />
                                         ទិដ្ឋពីក្រោយជីវិត
                                     </Button>
                                 </div>
@@ -76,9 +65,9 @@ export default function HomePage()
                             <div className='sk-head'>
                                 <div className='skh-box df-l'>
                                     <div className='list-icon'>
-                                        <Record/>
-                                        <Record/>
-                                        <Record/>
+                                        <Record />
+                                        <Record />
+                                        <Record />
                                     </div>
                                 </div>
                             </div>
@@ -90,23 +79,23 @@ export default function HomePage()
                                         </div>
                                         <ul>
                                             <li className="df-l">
-                                                <Hashtag/>
+                                                <Hashtag />
                                                 <p>Basic English</p>
                                             </li>
                                             <li className="df-l">
-                                                <Hashtag/>
+                                                <Hashtag />
                                                 <p>Basic computer</p>
                                             </li>
                                             <li className="df-l">
-                                                <Hashtag/>
+                                                <Hashtag />
                                                 <p>Computer network system</p>
                                             </li>
                                             <li className="df-l">
-                                                <Hashtag/>
+                                                <Hashtag />
                                                 <p>Adobe Photoshop, Premiere pro</p>
                                             </li>
                                             <li className="df-l">
-                                                <Hashtag/>
+                                                <Hashtag />
                                                 <p>Microsoft basic</p>
                                             </li>
                                         </ul>
@@ -117,39 +106,39 @@ export default function HomePage()
                                         </div>
                                         <ul>
                                             <li className="df-l">
-                                                <Hashtag/>
+                                                <Hashtag />
                                                 <p>Project paper (python)</p>
                                             </li>
                                             <li className="df-l">
-                                                <Hashtag/>
+                                                <Hashtag />
                                                 <p>Advance Java programing</p>
                                             </li>
                                             <li className="df-l">
-                                                <Hashtag/>
+                                                <Hashtag />
                                                 <p>Web development programing (HTML + CSS + JS)</p>
                                             </li>
                                             <li className="df-l">
-                                                <Hashtag/>
+                                                <Hashtag />
                                                 <p>Computer Graphic designs (Photoshop)</p>
                                             </li>
                                             <li className="df-l">
-                                                <Hashtag/>
+                                                <Hashtag />
                                                 <p>MData structure and algorithm program (python)</p>
                                             </li>
                                             <li className="df-l">
-                                                <Hashtag/>
+                                                <Hashtag />
                                                 <p>Digital marketing </p>
                                             </li>
                                             <li className="df-l">
-                                                <Hashtag/>
+                                                <Hashtag />
                                                 <p>Web technology (Angular + Node express basic) </p>
                                             </li>
                                             <li className="df-l">
-                                                <Hashtag/>
+                                                <Hashtag />
                                                 <p>Network administrator</p>
                                             </li>
                                             <li className="df-l">
-                                                <Hashtag/>
+                                                <Hashtag />
                                                 <p>Linux open source</p>
                                             </li>
                                         </ul>
@@ -162,23 +151,23 @@ export default function HomePage()
                                         </div>
                                         <ul>
                                             <li className="df-l">
-                                                <Hashtag/>
+                                                <Hashtag />
                                                 <p>Mobile Application development (Flutter)</p>
                                             </li>
                                             <li className="df-l">
-                                                <Hashtag/>
+                                                <Hashtag />
                                                 <p>Open source Technology (Laravel + XAMP) </p>
                                             </li>
                                             <li className="df-l">
-                                                <Hashtag/>
+                                                <Hashtag />
                                                 <p>Net programing (ASP.net)</p>
                                             </li>
                                             <li className="df-l">
-                                                <Hashtag/>
+                                                <Hashtag />
                                                 <p>Research Methodology</p>
                                             </li>
                                             <li className="df-l">
-                                                <Hashtag/>
+                                                <Hashtag />
                                                 <p>Database Administrator (Microsoft SQL server) </p>
                                             </li>
                                         </ul>
@@ -189,23 +178,23 @@ export default function HomePage()
                                         </div>
                                         <ul>
                                             <li className="df-l">
-                                                <Hashtag/>
+                                                <Hashtag />
                                                 <p>Electronic Ecommerce (Ecommerce introduction + WordPress + Laravel)</p>
                                             </li>
                                             <li className="df-l">
-                                                <Hashtag/>
+                                                <Hashtag />
                                                 <p>Big data Analytics</p>
                                             </li>
                                             <li className="df-l">
-                                                <Hashtag/>
+                                                <Hashtag />
                                                 <p>Advance programming (Node express)</p>
                                             </li>
                                             <li className="df-l">
-                                                <Hashtag/>
+                                                <Hashtag />
                                                 <p>Software Engineer and project management </p>
                                             </li>
                                             <li className="df-l">
-                                                <Hashtag/>
+                                                <Hashtag />
                                                 <p>Machine Learning (Basic)</p>
                                             </li>
                                         </ul>
@@ -218,7 +207,7 @@ export default function HomePage()
                                         </div>
                                         <ul>
                                             <li className="df-l">
-                                                <Hashtag/>
+                                                <Hashtag />
                                                 <p>React JS, Vue.js, Flutter, Network, Node Express.</p>
                                             </li>
                                         </ul>
@@ -230,7 +219,7 @@ export default function HomePage()
                     {/* this is read node */}
                     <ProjectBackground />
                     {/* this is about page  */}
-                    <AboutPage/>  
+                    <AboutPage />
                     {/* this is show my story  */}
                     <section className="web-main">
                         <div className="main-body">
@@ -252,26 +241,15 @@ export default function HomePage()
                                                     <div className='box'>
                                                         <ul>
                                                             {
-                                                                loading ? (
-
+                                                                isLoading ? (
                                                                     <WebLoader>
                                                                         រង់ចាំបន្ដិចយើងកំពុងទាញយកទិន្នន័យដើម្បីដំណើរការ
                                                                     </WebLoader>
-
                                                                 ) : blogs.length === 0 ? (
-
-                                                                    <li
-                                                                        style={{
-                                                                            textAlign: 'center',
-                                                                            padding: '30px',
-                                                                            color: '#64748b'
-                                                                        }}
-                                                                    >
+                                                                    <li style={{ textAlign: 'center', padding: '30px', color: '#64748b' }}>
                                                                         មិនមានទិន្នន័យអត្ថបទឡើយ។
                                                                     </li>
-
                                                                 ) : (
-
                                                                     [...blogs].reverse().map((blog, index) => (
                                                                         <StoryCard
                                                                             key={index}
@@ -279,7 +257,6 @@ export default function HomePage()
                                                                             newStory={true}
                                                                         />
                                                                     ))
-
                                                                 )
                                                             }
                                                         </ul>
@@ -288,10 +265,9 @@ export default function HomePage()
                                             </div>
                                         </div>
                                         <div className='story-main-btn df-c'>
-                                            <Button>
+                                            <NavLink to='/storys' className="btn">
                                                 មើលបន្ថែមទៀត
-                                                <ArrowRight />
-                                            </Button>
+                                            </NavLink>
                                         </div>
                                     </div>
                                     <StarryBackground />
