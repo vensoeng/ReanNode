@@ -6,13 +6,6 @@
     },
     {
       "source": "/storys/detail/:id",
-      "has": [
-        {
-          "type": "header",
-          "key": "user-agent",
-          "value": "(facebookexternalhit|TelegramBot|Twitterbot|Slackbot|LinkedInBot)"
-        }
-      ],
       "destination": "/api/story?id=:id"
     },
     {
