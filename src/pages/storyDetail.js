@@ -43,10 +43,18 @@ export default function StoryDetail() {
         }
     }, [id]);
      
-    // check privait blog 
-    if(!blog){
-        return <NotFoundPage></NotFoundPage>;
+    if (loading) {
+        return (
+            <WebLoader>
+                យើងកំពុងធ្វើការទាញយកទិន្នន័យ...
+            </WebLoader>
+        );
     }
+
+    if (!blog || Number(blog.status) !== 1) {
+        return <NotFoundPage />;
+    }
+    
     return (
         <div className="styde styde-light">
             {/* this Is header  */}
