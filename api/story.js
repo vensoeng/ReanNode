@@ -1,17 +1,13 @@
 // api/story.js
-import { API_URL, STORAGE } from '../utils/auth';
+import { API_URL, STORAGE } from '../src/utils/auth';
 
 export default async function handler(req, res) {
   const { id } = req.query;
   const userAgent = req.headers['user-agent'] || '';
   
-  // ឆែកមើលថាជា Bot បណ្តាញសង្គម ឬអត់
   const isBot = /facebookexternalhit|TelegramBot|Twitterbot|Slackbot|LinkedInBot/i.test(userAgent);
 
   try {
-    // ----------------------------------------------------
-    // ករណីទី១៖ បើជា Bot របស់ Telegram ឬ Facebook ...
-    // ----------------------------------------------------
     if (isBot) {
       const apiRes = await fetch(`${API_URL}/blogs/${id}`);
       if (apiRes.status !== 200) {
@@ -47,10 +43,6 @@ export default async function handler(req, res) {
       return res.status(200).send(html);
     }
 
-    // ----------------------------------------------------
-    // ករណីទី២៖ បើជា មនុស្សធម្មតា (Bypass ឱ្យទៅកាន់ React ផ្ទាល់)
-    // ----------------------------------------------------
-    // បង្កើតកូដ HTML ឆៅមួយដើម្បីដាស់ឱ្យ React App (Vite) របស់អ្នកដំណើរការខ្លួនឯងនៅលើ Browser
     const reactAppHtml = `
       <!DOCTYPE html>
       <html lang="km">
