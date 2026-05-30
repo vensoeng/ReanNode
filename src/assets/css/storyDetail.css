@@ -1,0 +1,9 @@
+.styde{
+    min-height: 100vh;
+    position: relative;
+    background: var(--colorText-00);
+}
+
+.stydebox{
+    padding: 3.5rem 0rem;
+}

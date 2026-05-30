@@ -45,6 +45,11 @@ export default function StoryPage({blog = {} , index = 0, newStory = false}) {
             if (cleanupListeners) cleanupListeners();
         };
     }, [imageUrl, blog.title]);
+    
+    // check privait blog 
+    if(Number(blog.status) !== 1 ){
+        return;
+    }
 
     return (
         <li style={{ "--bg-img": `url(${API_URL + STORAGE + blog.img})` }}>
