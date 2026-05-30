@@ -5,6 +5,7 @@ import { API_URL, STORAGE } from '../utils/auth';
 
 import WebLoader from '../components/common/WebLoader';
 import { ArrowLeft, Moon, Link21 } from 'iconsax-reactjs';
+import NotFoundPage from './404';
 import '../assets/css/storyDetail.css';
 export default function StoryDetail() {
     const navigate = useNavigate();
@@ -44,7 +45,7 @@ export default function StoryDetail() {
      
     // check privait blog 
     if(!blog || Number(blog.status) !== 1 ){
-        return;
+        return <NotFoundPage></NotFoundPage>;
     }
     return (
         <div className="styde styde-light">

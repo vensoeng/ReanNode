@@ -38,6 +38,11 @@ body:has(.styde-light){
     max-width: 900px;
     margin: 0rem auto;
 }
+@media screen and (max-width: 900px) {
+    .styde-head .stydh-box{
+        margin: 0rem 0.8rem;
+    }
+}
 .styde-head .row{
     gap: 0.5rem;
 }
