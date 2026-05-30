@@ -42,7 +42,11 @@ export default function StoryDetail() {
             fetchSingleBlog();
         }
     }, [id]);
-
+     
+    // check privait blog 
+    if(!blog){
+        return <NotFoundPage></NotFoundPage>;
+    }
     return (
         <div className="styde styde-light">
             {/* this Is header  */}
