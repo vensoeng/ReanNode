@@ -1,17 +1,14 @@
 // api/story.js
-import fs from 'fs';
-import path from 'path';
-import { API_URL, STORAGE } from '../src/utils/auth';
+import { API_URL, STORAGE } from '../utils/auth';
 
 export default async function handler(req, res) {
   const { id } = req.query;
   const userAgent = req.headers['user-agent'] || '';
   
-  // ឆែកមើលថាជា Bot បណ្តាញសង្គម ឬអត់
   const isBot = /facebookexternalhit|TelegramBot|Twitterbot|Slackbot|LinkedInBot/i.test(userAgent);
 
   try {
-
+   
     if (isBot) {
       const apiRes = await fetch(`${API_URL}/blogs/${id}`);
       if (apiRes.status !== 200) {
@@ -47,25 +44,14 @@ export default async function handler(req, res) {
       return res.status(200).send(html);
     }
 
-    const indexPath = path.resolve(process.cwd(), 'dist/index.html');
-    
-    if (fs.existsSync(indexPath)) {
-      const originalHtml = fs.readFileSync(indexPath, 'utf8');
-      res.setHeader('Content-Type', 'text/html');
-      return res.status(200).send(originalHtml);
-    } else {
-      const fallbackPath = path.resolve(process.cwd(), 'index.html');
-      if (fs.existsSync(fallbackPath)) {
-        const originalHtml = fs.readFileSync(fallbackPath, 'utf8');
-        res.setHeader('Content-Type', 'text/html');
-        return res.status(200).send(originalHtml);
-      }
-    }
+    const reactRes = await fetch('https://vensoeng.vercel.app/');
+    const reactHtml = await reactRes.text();
 
-    return res.redirect('/');
+    res.setHeader('Content-Type', 'text/html');
+    return res.status(200).send(reactHtml);
 
   } catch (err) {
     console.error("Error inside serverless function:", err);
-    return res.status(500).send('Internal Server Error');
+    return res.redirect('/');
   }
 }
