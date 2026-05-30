@@ -13,7 +13,7 @@ import StoryCard from '../components/common/StoryCard';
 import StarryBackground from '../components/common/StarryBackground';
 import AdvertisementPopup from '../components/common/AdvertisementPopup';
 
-import { Record, Hashtag, Book1} from 'iconsax-reactjs';
+import { Record, Hashtag, Book1, ArrowRight} from 'iconsax-reactjs';
 //webpage add on
 import AboutPage from './about';
 // import StoryPage from './story';
@@ -267,6 +267,7 @@ export default function HomePage() {
                                         <div className='story-main-btn df-c'>
                                             <NavLink to='/storys' className="btn">
                                                 មើលបន្ថែមទៀត
+                                                <ArrowRight />
                                             </NavLink>
                                         </div>
                                     </div>

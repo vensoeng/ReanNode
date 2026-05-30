@@ -7,7 +7,7 @@ import WebLoader from '../components/common/WebLoader';
 import '../assets/css/story.css';
 import StoryCard from '../components/common/StoryCard';
 import StarryBackground from '../components/common/StarryBackground';
-import {ArrowRight} from 'iconsax-reactjs';
+
 
 const fetchBlogsFromServer = async () => {
     const res = await fetch(`${API_URL}/blogs`);
@@ -30,7 +30,7 @@ export default function StoryPage({active = true})
             <div className="main-body">
                 <div className="mb-box">
                     <section className="me-story">
-                        <canvas id="star-canvas"></canvas>
+                        
                         <div className="ms-box">
                             <div className="ms-head">
                                 <div className="msh-box">
@@ -71,7 +71,6 @@ export default function StoryPage({active = true})
                             <div className='story-main-btn df-c'>
                                 <NavLink to='/' className="btn">
                                     ទៅកាន់ទំេព័រដើម
-                                    <ArrowRight />
                                 </NavLink>
                             </div>
                         </div>

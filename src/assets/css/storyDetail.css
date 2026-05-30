@@ -1,9 +1,18 @@
+body:has(.styde) .webhead,
+body:has(.styde) .web-footer{
+    display: none;
+}
 .styde{
     min-height: 100vh;
     position: relative;
     background: var(--colorText-00);
 }
-
 .stydebox{
     padding: 3.5rem 0rem;
+    max-width: 900px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border: 1px solid var(--colorBorder-00);
+    border-top: none;
+    border-bottom: none;
 }

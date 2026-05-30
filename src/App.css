@@ -16,6 +16,7 @@
     border: none;
     font-family: "Kantumruy Pro", system-ui;
     box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
 }
 svg{
     width: 1.4rem;
