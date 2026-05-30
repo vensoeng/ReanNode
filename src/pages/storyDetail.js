@@ -44,7 +44,7 @@ export default function StoryDetail() {
     }, [id]);
      
     // check privait blog 
-    if(!blog || Number(blog.status) !== 1 ){
+    if(!blog && Number(blog.status) !== 1 ){
         return <NotFoundPage></NotFoundPage>;
     }
     return (
