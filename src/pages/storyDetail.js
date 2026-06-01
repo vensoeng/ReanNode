@@ -31,6 +31,14 @@ export default function StoryDetail() {
 
     const [showShare, setShowShare] = useState(false);
     const shareUrl = `https://vensoeng.vercel.app/share/story/${id}`;
+    const copyLink = async () => {
+        try {
+            await navigator.clipboard.writeText(shareUrl);
+            alert('Link copied successfully');
+        } catch (err) {
+            console.error(err);
+        }
+    };
     const handleShare = async () => {
         if (navigator.share) {
             try {
@@ -183,7 +191,7 @@ export default function StoryDetail() {
                                 <FaTimes />
                             </button>
 
-                            <h3>ចែករំលែកអត្ថបទ</h3>
+                            <h3>ចែករំលែក</h3>
 
                             <div className="share-qr">
 
