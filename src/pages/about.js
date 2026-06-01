@@ -2,11 +2,14 @@ import './../assets/css/about.css';
 import aboutImg from './../assets/img/vensoeng.png';
 import nmuLogo from './../assets/img/nmu_logo.jpg';
 import Button from '../components/common/button';
+
+import StudyList from '../components/common/ListStudy';
+
 import { MessageText1, Profile2User, Activity, Blur, Code, Cd, ArrowRight} from 'iconsax-reactjs';
-export default function AboutPage()
+export default function AboutPage({active = true})
 {
  return (
-   <main className="web-main">
+   <main className={active ? "web-main about-main-active" : "web-main"}>
       <div className="main-body">
          <div className="mb-box">
             {/* -----about-----  */}
@@ -34,12 +37,12 @@ export default function AboutPage()
                               <h2>ខ្ញុំសង្ឃឹមថា នឹងមានឱកាសដ៏ល្អក្នុងការចូលរួមការងារលើវិស័យដែលខ្ញុំកំពុងសិក្សា។</h2>
                               <blockquote>
                                  <p>
-                                    ជាមួយនឹងចំណង់ចំណូលចិត្តក្នុងការរៀនសូត្រយ៉ាងខ្លាំងខ្លា និងការដោះស្រាយបញ្ហាបច្ចេកទេស គ្រាន់តែមានការងារនៅវិស័យ IT Support ឬ Web Development នឹងអាចជួយខ្ញុំទទួលបានបទពិសោធន៍ថ្មី និងបន្តការអភិវឌ្ឍសមត្ថភាពអាជីពរបស់ខ្ញុំ។                                
+                                    ខ្ញុំមានចំណង់ចំណូលចិត្តក្នុងការសិក្សារៀនសូត្រ និងចែករំលែក បច្ចុប្បន្នខ្ញុំកំពុងស្វែងរកអ្នកដែលត្រូវការដៃគូសហការទៅលើគម្រោងផ្សេងៗទាក់ទងនិង Web-App Development ដែលអាចឱ្យខ្ញុំទទួលបានបទពិសោធន៍ថ្មី ចំណូល និងការអភិវឌ្ឍសមត្ថភាពលើអាជីពរបស់ខ្ញុំ។                                
                                  </p>
                               </blockquote>
                               <div className="button">
                                  <Button>
-                                    រឿងពីក្រោយនៃជីវិត
+                                    មើលប្រវត្តិរូបរបស់ខ្ញុំ
                                     <ArrowRight/>
                                  </Button>
                               </div>
@@ -47,6 +50,8 @@ export default function AboutPage()
                     </div>
                 </div>
             </section>
+            {/* ----- study ----- */}
+            {active ?<div style={{ marginTop: '3rem' }}><StudyList /></div> : null}
             {/* ----- school ----- */}
             <section className='school' id='scholl'>
                <div className='sch-box df-s'>

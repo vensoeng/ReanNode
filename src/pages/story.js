@@ -68,11 +68,15 @@ export default function StoryPage({active = true})
                                     </div>
                                 </div>
                             </div>
+                            {isLoading ? (
+                                ''
+                            ):(
                             <div className='story-main-btn df-c'>
                                 <NavLink to='/' className="btn">
                                     ទៅកាន់ទំេព័រដើម
                                 </NavLink>
                             </div>
+                            )}
                         </div>
                         <StarryBackground />
                     </section>

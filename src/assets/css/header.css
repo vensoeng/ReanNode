@@ -156,14 +156,67 @@
     bottom: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.295);
+    /* background: rgba(0, 0, 0, 0.295); */
     justify-content: center;
-    align-items: end;
+    align-items: flex-end;
     z-index: 9999999999;
     display: none;
 }
+.web-main-aside-active {
+    display: flex;
+}
+
+.web-main-aside .webmas-con {
+    width: 100%;
+    height: max-content;
+    position: relative;
+    background: var(--sg-bglight);
+    border-radius: 1.1rem 1.1rem 0rem 0rem;
+    z-index: 3;
+    touch-action: none;
+}
+
+.web-main-aside-active .webmas-con .weasc-box {
+    height: calc(100vh - 25vh);
+}
+/* 
+.web-main-aside .webmas-con .webmas-drag-handle {
+    width: 5rem;
+    height: 0.5rem;
+    border-radius: 50rem;
+    background: #e4e4e7;
+    margin: 1rem auto 0.5rem auto;
+    cursor: grab;
+} */
+.web-main-aside .webmas-con .webmas-drag-handle:active {
+    cursor: grabbing;
+}
+
+/* Reset system configuration overlay layer specs */
+.web-main-aside .web-main-aside-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+
+.web-main-aside .web-main-aside-overlay{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top:0;
+    background: rgba(0, 0, 0, 0.295);
+    z-index: -1;
+}
 .web-main-aside-active{
-    display: block;
+    display: flex;
 }
 .web-main-aside .webmas-con{
     width: 100%;
@@ -173,6 +226,7 @@
     border-radius: 1.1rem 1.1rem 0rem 0rem;
     margin-top: 100vh;
     transition: all ease-in-out 0.3s;
+    z-index: 3;
 }
 .web-main-aside-active .webmas-con{
     margin-top: 0rem;
@@ -263,6 +317,11 @@
     /* .webhead .btn-main a.btn:first-child{
         display: none;
     } */
+}
+@media screen and (max-width: 670px){
+    .webhead .btn-main .btn:last-child{
+        display: flex;
+    }
 }
 /* @media screen and (max-width: 530px) {
     .webhead .link-box ul{

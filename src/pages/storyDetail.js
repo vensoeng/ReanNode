@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { API_URL, STORAGE } from '../utils/auth';
 
 import WebLoader from '../components/common/WebLoader';
-import { ArrowLeft, Moon, Link21 } from 'iconsax-reactjs';
+import { ArrowLeft, Moon, Link21, Sun1 } from 'iconsax-reactjs';
 import NotFoundPage from './404';
 
 import QRCode from "react-qr-code";
@@ -112,7 +112,7 @@ export default function StoryDetail() {
                     </div>
                     <div className='row df-l'>
                         <button className='btn ibtn' onClick={() => setToggleTheme(!toogleTheme)}>
-                            <Moon />
+                            {toogleTheme ? <Sun1 /> : <Moon />}
                         </button>
                         <button 
                             className='btn ibtn'
