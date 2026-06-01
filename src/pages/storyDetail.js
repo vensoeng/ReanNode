@@ -31,12 +31,19 @@ export default function StoryDetail() {
 
     const [showShare, setShowShare] = useState(false);
     const shareUrl = `https://vensoeng.vercel.app/share/story/${id}`;
-    const copyLink = async () => {
-        try {
-            await navigator.clipboard.writeText(shareUrl);
-            alert('Link copied successfully');
-        } catch (err) {
-            console.error(err);
+    const handleShare = async () => {
+        if (navigator.share) {
+            try {
+                await navigator.share({
+                    title: blog.title,
+                    text: blog.des,
+                    url: shareUrl,
+                });
+            } catch (err) {
+                console.log(err);
+            }
+        } else {
+            setShowShare(true);
         }
     };
 
@@ -101,7 +108,7 @@ export default function StoryDetail() {
                         </button>
                         <button 
                             className='btn ibtn'
-                            onClick={() => setShowShare(true)}
+                            onClick={handleShare}
                         >
                             <Link21 />
                         </button>
