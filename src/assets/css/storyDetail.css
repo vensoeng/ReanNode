@@ -12,13 +12,24 @@ body:has(.styde-light){
     --sg-head-bg: #fff;
     --sg-head-border: #e0e9fb;
     --sg-headcon-border: #e0e9fb;
+    --sg-ibnt-bg-hover: rgb(250,250,250);
     --sg-form-font: "Google Sans", sans-serif;
+    --img-bg-ds: none;
 }
 /* ------------- */ body:has(.styde-light) p{
     color: var(--sg-txt-color) !important;
 }
-.styde-dark{
-
+body:has(.styde-dark){
+    --sg-txt-color:  rgb(255, 255, 255);
+    --sg-bg-color: #000;
+    --sg-bg-70: rgb(250,250,250);
+    --sg-bg-50: #e0e9fb0f;
+    --sg-head-bg: rgba(22, 22, 22, 0.699);
+    --sg-head-border: #4444447c;
+    --sg-headcon-border: rgb(32, 32, 32);
+    --sg-ibnt-bg-hover: var(--sg-bg-50);
+    --sg-form-font: "Google Sans", sans-serif;
+    --img-bg-ds: block;
 }
 
 .styde{
@@ -32,6 +43,7 @@ body:has(.styde-light){
     border-bottom: 1px solid var(--sg-head-border);
     background: var(--sg-head-bg);
     z-index: 100;
+    backdrop-filter: blur(10px);
 }
 .styde-head .stydh-box{
     height: 60px;
@@ -51,11 +63,14 @@ body:has(.styde-light){
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50rem;
-    background: var(--sg-bglight);
+    background: transparent;
     min-width: max-content;
 }
-.styde-head .ibtn{
-
+.styde-head .ibtn:hover{
+    background: var(--sg-ibnt-bg-hover);
+}
+.styde-head .ibtn path{
+    stroke: var(--sg-txt-color);  
 }
 .styde-head .btn-home{
     border-radius: 50rem;
@@ -64,6 +79,7 @@ body:has(.styde-light){
 }
 .styde-head h2{
     font-family: var(--sg-form-font);
+    color: var(--sg-txt-color);
     font-size: 1.25rem;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -78,12 +94,35 @@ body:has(.styde-light){
     border-top: none;
     border-bottom: none;
 }
-
+.stydeconhead{
+    position: relative;
+    z-index: 1;
+}
+.stydeconhead::after{
+    content: "";
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--bg-img);
+    background-size: cover;
+    background-position: center;
+    filter: blur(100px);
+    display: var(--img-bg-ds);
+}
+.stydeconhead-box{
+    position: relative;
+    z-index: 2;
+}
 .stydeconhead .styd-img{
     max-height: 350px;
     /* min-height: 250px; */
     overflow: visible;
     overflow: hidden;
+}
+.stydeconhead .styd-img-active{
+    min-height: 250px;
 }
 .stydeconhead .styd-info {
     margin: 1rem;
@@ -99,15 +138,122 @@ body:has(.styde-light){
 .stydeconhead .styd-info h2{
     font-size: 1.5rem;
     font-family: var(--sg-form-font);
+    color: var(--sg-txt-color);
 }
 .stydeconhead .styd-info blockquote{
     font-size: 1.08rem;
     font-style: italic;
     font-family: var(--sg-form-font);
+    color: var(--sg-txt-color);
+    line-height: 1.5;
 }
 
 @media screen and (max-width: 670px) {
     .stydeconhead .styd-img{
         max-height: 250px;
     }
+}
+
+/* ========================== share> */
+.share-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.55);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:9999;
+}
+
+.share-modal{
+    width:420px;
+    max-width:95%;
+    background:#fff;
+    border-radius:15px;
+    padding:24px;
+    position:relative;
+}
+
+.share-close{
+    position:absolute;
+    top: 0.8rem;
+    right: 0.8rem;
+    border:none;
+    background:none;
+    font-size:20px;
+    border-radius: 50rem !important;
+    background: var(--sg-bglight) !important;
+    cursor:pointer;
+}
+
+.share-modal h3{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.share-qr{
+    display:flex;
+    justify-content:center;
+    margin-bottom:25px;
+
+}
+.share-qr svg{
+    width:80px;
+    height:80px;
+}
+.share-qr svg path{
+    stroke: none;
+}
+
+.share-socials{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    margin-bottom:20px;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overflow-y: visible;
+    scrollbar-width: none;
+}
+.share-socials::-webkit-scrollbar{
+    display: none;
+}
+
+.share-socials a{
+    flex:1;
+    text-decoration:none;
+    color:#333;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+    min-width: max-content;
+}
+
+.share-socials svg{
+    font-size:28px;
+}
+
+.share-copy{
+    display:flex;
+    gap:10px;
+}
+
+.share-copy input{
+    flex:1;
+    padding:10px;
+    outline:none;
+    border:1px solid #ddd;
+    border-radius:10px;
+}
+.share-copy input:focus{
+    border-color: #aaa;
+}
+
+.share-copy button{
+    padding:10px 18px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
 }

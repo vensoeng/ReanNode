@@ -6,16 +6,40 @@ import { API_URL, STORAGE } from '../utils/auth';
 import WebLoader from '../components/common/WebLoader';
 import { ArrowLeft, Moon, Link21 } from 'iconsax-reactjs';
 import NotFoundPage from './404';
+
+import QRCode from "react-qr-code";
+import {
+    FaFacebookF,
+    FaTelegramPlane,
+    FaLinkedinIn,
+    FaWhatsapp,
+    FaTimes
+} from "react-icons/fa";
+
+
 import '../assets/css/storyDetail.css';
 export default function StoryDetail() {
     const navigate = useNavigate();
 
     const { id } = useParams(); 
     const [blog, setBlog] = useState(null);
+    const [imgContent, setImgContent] = useState(false);
     const [htmlContent, setHtmlContent] = useState('');
     const [loading, setLoading] = useState(true);
     const [loadingHtml, setLoadingHtml] = useState(false);
-    
+    const [toogleTheme, setToggleTheme] = useState(false);
+
+    const [showShare, setShowShare] = useState(false);
+    const shareUrl = `https://vensoeng.vercel.app/share/story/${id}`;
+    const copyLink = async () => {
+        try {
+            await navigator.clipboard.writeText(shareUrl);
+            alert('Link copied successfully');
+        } catch (err) {
+            console.error(err);
+        }
+    };
+
     useEffect(() => {
         const fetchSingleBlog = async () => {
             try {
@@ -34,6 +58,7 @@ export default function StoryDetail() {
                 console.error("Error fetching blog or HTML:", err);
             } finally {
                 setLoading(false);
+                setImgContent(true);
                 setLoadingHtml(false);
             }
         };
@@ -56,7 +81,7 @@ export default function StoryDetail() {
     }
     
     return (
-        <div className="styde styde-light">
+        <div className={toogleTheme ? 'styde styde-dark' : 'styde styde-light'}>
             {/* this Is header  */}
             <div className='styde-head'>
                 <div className='stydh-box df-s'>
@@ -71,10 +96,13 @@ export default function StoryDetail() {
                         <h2>{blog.title}</h2>
                     </div>
                     <div className='row df-l'>
-                        <button className='btn ibtn'>
+                        <button className='btn ibtn' onClick={() => setToggleTheme(!toogleTheme)}>
                             <Moon />
                         </button>
-                        <button className='btn ibtn'>
+                        <button 
+                            className='btn ibtn'
+                            onClick={() => setShowShare(true)}
+                        >
                             <Link21 />
                         </button>
                     </div>
@@ -93,9 +121,9 @@ export default function StoryDetail() {
                     blog && (
                         <div className="story-content">
                             {/* heade */}
-                            <div className='stydeconhead'>
+                            <div className='stydeconhead' style={{ "--bg-img": `url(${API_URL + STORAGE + blog.img})` }}>
                                 <div className='stydeconhead-box'>
-                                    <div className='styd-img'>
+                                    <div className={imgContent ? 'styd-img' : 'styd-img-acive'} >
                                         <img 
                                             className="img-c" 
                                             src={API_URL + STORAGE + blog.img} 
@@ -133,6 +161,90 @@ export default function StoryDetail() {
                 )}
 
             </div>
+
+            {/* share modal */}
+            {
+                showShare && (
+                    <div className="share-overlay">
+
+                        <div className="share-modal">
+
+                            <button
+                                className="share-close btn icon-ra icon-sm"
+                                onClick={() => setShowShare(false)}
+                            >
+                                <FaTimes />
+                            </button>
+
+                            <h3>ចែករំលែកអត្ថបទ</h3>
+
+                            <div className="share-qr">
+
+                                <QRCode
+                                    value={shareUrl}
+                                    size={160}
+                                />
+
+                            </div>
+
+                            <div className="share-socials">
+
+                                <a
+                                    href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    <FaFacebookF />
+                                    <span>Facebook</span>
+                                </a>
+
+                                <a
+                                    href={`https://t.me/share/url?url=${encodeURIComponent(shareUrl)}`}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    <FaTelegramPlane />
+                                    <span>Telegram</span>
+                                </a>
+
+                                <a
+                                    href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    <FaLinkedinIn />
+                                    <span>LinkedIn</span>
+                                </a>
+
+                                <a
+                                    href={`https://wa.me/?text=${encodeURIComponent(shareUrl)}`}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    <FaWhatsapp />
+                                    <span>WhatsApp</span>
+                                </a>
+
+                            </div>
+
+                            <div className="share-copy">
+
+                                <input
+                                    value={shareUrl}
+                                    readOnly
+                                />
+
+                                <button onClick={copyLink}>
+                                    Copy
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                )
+            }
         </div>
-    );
+    );    
 }
